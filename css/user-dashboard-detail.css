@@ -1,0 +1,325 @@
+ .project-detail {
+	width: 100%;
+}
+
+.project-heading {
+	margin-bottom: 20px;
+}
+
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #8C8983;
+	font-size: 12px;
+}
+
+.breadcrumb a {
+	color: #8C8983;
+	text-decoration: none;
+}
+
+.breadcrumb span:last-child {
+	color: #C96A53;
+	font-weight: 600;
+}
+
+.project-title-row {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.project-title {
+	color: #2B2A27;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.project-title-row .status {
+	width: auto;
+	height: auto;
+	min-height: 23px;
+}
+
+.project-progress {
+	margin-bottom: 24px;
+	padding: 24px;
+}
+
+.project-progress-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+	color: #2B2A27;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.project-progress-top strong {
+	color: #7A927B;
+	white-space: nowrap;
+}
+
+
+.detail-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.55fr) minmax(290px, 1fr);
+	align-items: start;
+	gap: 24px;
+}
+
+.detail-column {
+	display: grid;
+	min-width: 0;
+	align-content: start;
+	gap: 24px;
+}
+
+.detail-column .panel {
+	padding: 24px;
+}
+
+.detail-column .panel-title {
+	margin-bottom: 16px;
+	font-size: 18px;
+    font-weight: bold;
+}
+
+
+.milestone {
+	display: grid;
+	grid-template-columns: 18px minmax(0, 1fr);
+	gap: 16px;
+	min-height: 50px;
+}
+
+.milestone:last-child {
+	min-height: 34px;
+}
+
+.milestone-marker {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	border-radius: 50%;
+	background: #E8E2D9;
+}
+
+.milestone:not(:last-child) .milestone-marker::after {
+	position: absolute;
+	top: 16px;
+	left: 7px;
+	width: 2px;
+	height: 40px;
+	background: #E8E2D9;
+	content: "";
+}
+
+.milestone.is-done .milestone-marker,
+.milestone.is-done .milestone-marker::after {
+	background: #7A927B;
+}
+
+.milestone.is-active .milestone-marker,
+.milestone.is-active .milestone-marker::after {
+	background: #C96A53;
+}
+
+.milestone h3 {
+	color: #53514E;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.milestone.is-active h3 {
+	color: #2B2A27;
+	font-weight: bold;
+}
+
+.milestone p {
+	color: #8C8983;
+	font-size: 12px;
+}
+
+.file-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.file-item {
+	display: flex;
+	min-width: 0;
+	align-items: center;
+	gap: 10px;
+	padding: 12px;
+	border: 1px solid #E8E2D9;
+	border-radius: 8px;
+	background: #FAF6F0;
+	color: inherit;
+	text-decoration: none;
+}
+
+.pdf-thumbnail,
+.file-thumbnail {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 40px;
+	height: 40px;
+	flex: 0 0 40px;
+	border-radius: 4px;
+	background: #fff;
+	color: #C96A53;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+.file-thumbnail {
+	object-fit: cover;
+}
+
+.file-copy {
+	display: grid;
+	min-width: 0;
+}
+
+.file-copy strong {
+	overflow: hidden;
+	color: #2B2A27;
+	font-size: 13px;
+    font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.file-copy small {
+	color: #8C8983;
+	font-size: 11px;
+}
+
+
+.budget-list div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.budget-list dt {
+	color: #53514E;
+	font-size: 14px;
+}
+
+.budget-list dd {
+	color: #2B2A27;
+	font-size: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.budget-list .budget-paid {
+	color: #C96A53;
+}
+
+.budget-list .budget-remaining {
+	color: #7A927B;
+}
+
+.budget-meter {
+	height: 8px;
+}
+
+.budget-meter .progress-fill {
+	height: 8px;
+	background: #C96A53;
+}
+
+.contractor-profile {
+	display: flex;
+	align-items: center;
+	
+	margin: 16px 0;
+}
+
+.contractor-profile img {
+	width: 48px;
+	height: 48px;
+	flex: 0 0 48px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.contractor-profile h3 {
+	color: #2B2A27;
+	font-size: 15px;
+    font-weight: bold;
+}
+
+.contractor-profile p {
+	color: #8C8983;
+	font-size: 12px;
+}
+
+.contractor-actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+}
+
+.contractor-actions a {
+	display: block;
+	padding: 10px 16px;
+	border: 1px solid #E8E2D9;
+	border-radius: 8px;
+	color: #2B2A27;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+.contractor-actions .message-button {
+	border-color: #C96A53;
+	background: #C96A53;
+	color: #fff;
+}
+
+
+.activity-panel ol {
+    list-style: none;
+}
+
+.activity-list li p {
+	color: #53514E;
+	font-size: 13px;
+}
+
+.activity-list li strong {
+	color: #2B2A27;
+}
+
+.activity-list time {
+	display: block;
+	color: #8C8983;
+	font-size: 11px;
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+	.project-title {
+		font-size: 24px;
+	}
+
+	.detail-grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 16px;
+	}
+
+	.detail-column {
+		gap: 16px;
+	}
+}
