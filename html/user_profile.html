@@ -11,22 +11,60 @@
     />
   </head>
   <body>
+    <!--============================= Header =============================-->
     <header>
-      <div class="logo">BaanSuan</div>
-      <nav>
-        <ul>
-          <li><a href="">บ้าน</a></li>
-          <li><a href="">สวน</a></li>
-          <li><a href="">หาผู้รับเหมา</a></li>
-          <li><a href="">บทความ</a></li>
-          <li><a href="">เกี่ยวกับเรา</a></li>
-        </ul>
-      </nav>
-      <div class="login-section">
-        <a class="login" href="">เข้าสู่ระบบ</a>
-        <a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
+      <div class="head-logo">
+        <div class="logo-img">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z"
+              stroke="#FAF6F0"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <p>BaanSuan</p>
+      </div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="เปิดเมนูหลัก"
+        aria-controls="header-menu"
+        aria-expanded="false"
+        onclick="
+          const isOpen = this.parentElement.toggleAttribute('data-menu-open');
+          this.setAttribute('aria-expanded', isOpen);
+          this.setAttribute('aria-label', isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก');
+        "
+      >
+        <i class="bi bi-list menu-open-icon" aria-hidden="true"></i>
+        <i class="bi bi-x menu-close-icon" aria-hidden="true"></i>
+      </button>
+      <div class="header-menu" id="header-menu">
+        <nav aria-label="เมนูหลัก">
+          <ul>
+            <li><a href="">บ้าน</a></li>
+            <li><a href="">สวน</a></li>
+            <li><a href="">หาผู้รับเหมา</a></li>
+            <li><a href="">บทความ</a></li>
+            <li><a href="">เกี่ยวกับเรา</a></li>
+          </ul>
+        </nav>
+        <div class="login-section">
+          <a class="login" href="">เข้าสู่ระบบ</a>
+          <a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
+        </div>
       </div>
     </header>
+    <!--============================= End Header =============================-->
+
     <main>
       <div class="banner-bg">
         <img src="../imgs/user-banner.jpg" alt="User Banner" />
@@ -132,16 +170,27 @@
             </div>
             <div class="location">
               <p class="info-head">ที่อยู่สถานที่ประเมินงานหน้างานหลัก</p>
-              <p >เดอะแกรนด์ ราชพฤกษ์ ถ.ราชพฤกษ์ ต.บางพลับ อ.ปากเกร็ด จ.นนทบุรี 11120</p>
+              <p>
+                เดอะแกรนด์ ราชพฤกษ์ ถ.ราชพฤกษ์ ต.บางพลับ อ.ปากเกร็ด จ.นนทบุรี
+                11120
+              </p>
             </div>
           </div>
           <div class="active-project">
             <p class="active-head">โปรเจกต์ที่กำลังดำเนินการ</p>
             <div class="project1">
-              <img src="../imgs/idea1.jpg" alt="">
+              <img
+                src="../imgs/idea1.jpg"
+                alt="ระเบียงและจัดสวนสไตล์โมเดิร์นทรอปิคอล"
+              />
               <div class="active-text">
-                <p class="active-t-head">ต่อเติมระเบียงและจัดสวนสไตล์โมเดิร์นทรอปิคอล</p>
-                <p>โดย BaanRak Garden & Studio · สถานะ: อยู่ระหว่างสรุปยอดมัดจำงวดที่ 1</p>
+                <p class="active-t-head">
+                  ต่อเติมระเบียงและจัดสวนสไตล์โมเดิร์นทรอปิคอล
+                </p>
+                <p>
+                  โดย BaanRak Garden & Studio · สถานะ:
+                  อยู่ระหว่างสรุปยอดมัดจำงวดที่ 1
+                </p>
               </div>
               <a class="active-btn" href="">ดูข้อมูล</a>
             </div>
@@ -151,49 +200,148 @@
           <div class="favorite">
             <p class="fav-head">สไตล์ที่ชื่นชอบ</p>
             <div class="fav-list">
-                <p>มินิมอล</p>
-                <p>นอร์ดิก</p>
-                <p>โมเดิร์นลอฟท์</p>
-                <p>สวนอังกฤษ</p>
-                <p>สวนเซนญี่ปุ่น</p>
-                <p>ใต้ถุนสูงทรอปิคอล</p>
+              <p>มินิมอล</p>
+              <p>นอร์ดิก</p>
+              <p>โมเดิร์นลอฟท์</p>
+              <p>สวนอังกฤษ</p>
+              <p>สวนเซนญี่ปุ่น</p>
+              <p>ใต้ถุนสูงทรอปิคอล</p>
             </div>
           </div>
           <div class="board">
             <div class="board-head">
-                <p>บอร์ดแรงบันดาลใจ (3 บอร์ด)</p>
+              <p>บอร์ดแรงบันดาลใจ (3 บอร์ด)</p>
             </div>
             <div class="board-list">
-                <div class="b">
-                    <img src="../imgs/idea1.jpg" alt="">
-                    <div class="b-text">
-                      <p class="pin-name">ไอเดียต่อเติมระเบียงหลังบ้าน</p>
-                      <p class="pin-num">14 พิน</p>
-                    </div>
+              <div class="b">
+                <img
+                  src="../imgs/idea1.jpg"
+                  alt="ไอเดียต่อเติมระเบียงหลังบ้าน"
+                />
+                <div class="b-text">
+                  <p class="pin-name">ไอเดียต่อเติมระเบียงหลังบ้าน</p>
+                  <p class="pin-num">14 พิน</p>
                 </div>
-                <div class="b">
-                    <img src="../imgs/idea2.jpg" alt="">
-                    <div class="b-text">
-                      <p class="pin-name">รวมพรรณไม้ทนแดดสไตล์ทรอปิคอล</p>
-                      <p class="pin-num">9 พิน</p>
-                    </div>
+              </div>
+              <div class="b">
+                <img
+                  src="../imgs/idea2.jpg"
+                  alt="รวมพรรณไม้ทนแดดสไตล์ทรอปิคอล"
+                />
+                <div class="b-text">
+                  <p class="pin-name">รวมพรรณไม้ทนแดดสไตล์ทรอปิคอล</p>
+                  <p class="pin-num">9 พิน</p>
                 </div>
-                <div class="b">
-                    <img src="../imgs/idea3.jpg" alt="">
-                    <div class="b-text">
-                      <p class="pin-name">สเปซมินิมอลญี่ปุ่น</p>
-                      <p class="pin-num">5 พิน</p>
-                    </div>
+              </div>
+              <div class="b">
+                <img src="../imgs/idea3.jpg" alt="สเปซมินิมอลญี่ปุ่น" />
+                <div class="b-text">
+                  <p class="pin-name">สเปซมินิมอลญี่ปุ่น</p>
+                  <p class="pin-num">5 พิน</p>
                 </div>
+              </div>
             </div>
-            
           </div>
         </aside>
       </div>
     </main>
 
+    <!--============================= Footer =============================-->
     <footer>
-      
+      <div class="top-footer">
+        <div class="logo">
+          <p class="logo-name">BaanSuan</p>
+          <p>
+            แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย
+            พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด
+          </p>
+        </div>
+        <div class="menu">
+          <div class="cate">
+            <div>
+              <p class="menu-head">ประเภทแบบบ้าน</p>
+            </div>
+            <p class="cate-t">บ้านโมเดิร์น</p>
+            <p class="cate-t">บ้านมินิมอล</p>
+            <p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
+            <p class="cate-t">ทาวน์โฮมสองชั้น</p>
+          </div>
+          <div class="cate">
+            <div>
+              <p class="menu-head">บริการจัดสวน</p>
+            </div>
+            <p class="cate-t">จัดสวนอังกฤษ</p>
+            <p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
+            <p class="cate-t">สวนหินดูแลง่าย</p>
+            <p class="cate-t">ระเบียงพืชพรรณ</p>
+          </div>
+          <div class="cate">
+            <div>
+              <p class="menu-head">สมาคมผู้รับเหมา</p>
+            </div>
+            <p class="cate-t">ค้นหาผู้รับเหมา</p>
+            <p class="cate-t">มาตรฐานบริการ</p>
+            <p class="cate-t">รีวิวจากลูกค้า</p>
+            <p class="cate-t">สมัครเป็นพันธมิตร</p>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="copy-text">
+          <p>&copy; 2026 BaanSuan. All rights reserved.</p>
+        </div>
+        <div class="contact">
+          <div class="foot-icon">
+            <svg
+              width="10"
+              height="16"
+              viewBox="0 0 10 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z"
+                stroke="#FAF6F0"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="foot-icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z"
+                stroke="#FAF6F0"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="foot-icon">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5"
+                stroke="#FAF6F0"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
     </footer>
+    <!--============================= End Footer =============================-->
   </body>
 </html>
