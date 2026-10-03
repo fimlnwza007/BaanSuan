@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BaanSuan</title>
     <link rel="stylesheet" href="../css/user_profile.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
   </head>
   <body>
     <!--============================= Header =============================-->
@@ -44,8 +40,12 @@
           this.setAttribute('aria-label', isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก');
         "
       >
-        <i class="bi bi-list menu-open-icon" aria-hidden="true"></i>
-        <i class="bi bi-x menu-close-icon" aria-hidden="true"></i>
+        <svg class="menu-open-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+        <svg class="menu-close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
       </button>
       <div class="header-menu" id="header-menu">
         <nav aria-label="เมนูหลัก">

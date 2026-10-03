@@ -507,28 +507,28 @@ body {
 @media screen and (max-width: 1023px) {
     /*============================= Header =============================*/
     header {
-        height: 96px;
+        min-height: 56px;
         width: 100%;
-        background-color: #faf6f0;
-        display: flex;
-        justify-content: space-between;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr auto;
         align-items: center;
-        position: relative;
-        padding: 0 20px;
+        column-gap: 12px;
+        padding: 10px 20px;
         border-bottom: 1px solid #E8E2D9;
     }
 
     /*============================= Hamburger Menu =============================*/
     .menu-toggle {
-        display: flex;
-        width: 44px;
-        height: 44px;
-        align-items: center;
-        justify-content: center;
-        border: 0;
-        background: none;
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        padding: 0;
+        border: 1px solid #E8E2D9;
+        border-radius: 8px;
+        background: #fff;
         color: #2B2A27;
-        font-size: 28px;
         cursor: pointer;
     }
 
@@ -538,21 +538,18 @@ body {
     }
 
     header[data-menu-open] .menu-close-icon {
-        display: inline;
+        display: block;
     }
 
     .header-menu {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 2;
+        grid-column: 1 / -1;
         width: 100%;
         flex-direction: column;
         gap: 16px;
-        padding: 12px 20px 20px;
-        background-color: #faf6f0;
-        border-bottom: 1px solid #E8E2D9;
+        padding: 14px 0 16px;
+        margin-top: 10px;
+        border-top: 1px solid #E8E2D9;
     }
 
     header[data-menu-open] .header-menu {
@@ -570,7 +567,12 @@ body {
 
     .header-menu nav a {
         display: block;
-        padding: 10px 0;
+        min-height: 42px;
+        padding: 9px 12px;
+        border-radius: 7px;
+        color: #2B2A27;
+        font-size: 14px;
+        font-weight: 400;
     }
 
     .header-menu .login-section {
@@ -603,15 +605,16 @@ body {
         color: #2B2A27;
     }
 
-    .head-logo {
+    header .head-logo {
         display: flex;
         gap: 12px;
         align-items: center;
+        font-size: 21px;
     }
 
     .logo-img {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background-color: #C96A53;
         display: flex;
