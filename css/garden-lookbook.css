@@ -1,0 +1,178 @@
+.garden-categories {
+    padding: 40px 80px 12px 80px;
+}
+
+.garden-categories a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background-color: white;
+    border: 1px solid #E8E2D9;
+    color: #53514E;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.garden-categories a.all {
+    background-color: #C96A53;
+    border: 1px solid #C96A53;
+    color: white;
+}
+
+.featured-garden {
+    display: flex;
+    /* height: 420px; */
+    margin: 24px 80px 48px 80px;
+    background-color: white;
+    border: 1px solid #E8E2D9;
+    border-radius: 24px;
+    
+}
+
+.featured-garden img {
+    border-radius: 24px 0 0 24px;
+    width: 720px;
+    height: auto;
+    object-fit: cover;
+}
+
+.featured-garden-info {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.eyebrow {
+    border-radius: 4px;
+    padding: 2px 10px 4px 10px;
+    background-color: #F5ECE6;
+    color: #C96A53;
+    width: fit-content;
+    margin-bottom: 16px;
+}
+
+.featured-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2B2A27;
+}
+
+.featured-title + p {
+    color: #53514E;
+    font-size: 15px;
+}
+
+.featured-garden-credit {
+    margin-top: auto;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-garden-credit p {
+    color: #8C8983;
+    font-size: 14px;
+}
+
+.featured-garden-credit span {
+    color: #2B2A27;
+    font-weight: bold;
+}
+
+.featured-garden-credit a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    background-color: #C96A53;
+    border-radius: 8px;
+    padding: 12px 24px;
+}
+
+.garden-ideas {
+    padding: 0 80px;
+}
+
+.garden-ideas h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2B2A27;
+}
+
+.garden-idea-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.garden-idea {
+    width: auto;
+    height: fit-content;
+    border-radius: 16px;
+    background-color: white;
+    border: 1px solid #E8E2D9;
+}
+
+.garden-idea img {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.garden-idea-info {
+    padding: 20px;
+}
+
+.garden-idea-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B2A27;
+    margin-bottom: 12px;
+}
+
+.garden-idea-info p {
+    padding-top: 12px;
+    color: #8C8983;
+    font-size: 12px;
+    border-top: 1px solid #E8E2D9;
+}
+
+@media screen and (max-width: 1024px) {
+    .garden-categories {
+        padding: 32px 24px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .featured-garden {
+        flex-direction: column;
+        margin: 24px 24px 32px;
+    }
+
+    .featured-garden img {
+        width: 100%;
+        height: 280px;
+        border-radius: 24px 24px 0 0;
+    }
+
+    .featured-garden-info {
+        padding: 24px;
+    }
+
+    .featured-garden-credit {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .garden-idea-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .garden-ideas {
+        padding: 0 24px;
+    }
+}

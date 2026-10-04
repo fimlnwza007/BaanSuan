@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="th">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ไอเดียจัดสวน | BaanSuan</title>
+		<link rel="stylesheet" href="../css/user_profile.css" />
+        <link rel="stylesheet" href="../css/garden-lookbook.css">
+	</head>
+	<body>
+		<!--============================= Header =============================-->
+		<header>
+			<div class="head-logo">
+				<div class="logo-img">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<path d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</div>
+				<p>BaanSuan</p>
+			</div>
+			<button
+				class="menu-toggle"
+				type="button"
+				aria-label="เปิดเมนูหลัก"
+				aria-controls="header-menu"
+				aria-expanded="false"
+				onclick="
+					const isOpen = this.parentElement.toggleAttribute('data-menu-open');
+					this.setAttribute('aria-expanded', isOpen);
+					this.setAttribute('aria-label', isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก');
+				"
+			>
+				<svg class="menu-open-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+					<path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+				</svg>
+				<svg class="menu-close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+					<path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+				</svg>
+			</button>
+			<div class="header-menu" id="header-menu">
+				<nav aria-label="เมนูหลัก">
+					<ul>
+						<li><a href="house-lookbook.html">บ้าน</a></li>
+						<li><a href="garden-lookbook.html" aria-current="page">สวน</a></li>
+						<li><a href="house-detail.html#designer">หาผู้รับเหมา</a></li>
+						<li><a href="">บทความ</a></li>
+						<li><a href="">เกี่ยวกับเรา</a></li>
+					</ul>
+				</nav>
+				<div class="login-section">
+					<a class="login" href="user-dashboard.html#overview">เข้าสู่ระบบ</a>
+					<a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
+				</div>
+			</div>
+		</header>
+		<!--============================= End Header =============================-->
+
+		<main>
+			<nav class="garden-categories" aria-label="หมวดหมู่สวน">
+				<a class="all" href="#garden-ideas" aria-current="page">ทั้งหมด</a>
+				<a href="#zen-garden">สวนเซน</a>
+				<a href="#tropical-garden">สวนป่า</a>
+				<a href="#vertical-garden">สวนแนวตั้ง</a>
+				<a href="#rooftop-garden">สวนดาดฟ้า</a>
+				<a href="#balcony-garden">สวนระเบียง</a>
+			</nav>
+
+			<section class="featured-garden" aria-labelledby="featured-title">
+				<img src="../imgs/idea2.jpg" alt="สวนเขียวชอุ่มด้วยไม้ใบเขตร้อนและพรรณไม้หลากหลาย" />
+				<div class="featured-garden-info">
+					<p class="eyebrow">สวนยอดนิยมประจำสัปดาห์</p>
+					<h1 id="featured-title" class="featured-title">สวนญี่ปุ่นเซนร่วมสมัย ดุลยภาพแห่งความเงียบสงบ</h1>
+					<p>แนวคิดจำลองธรรมชาติลงบนพื้นที่ขนาดจำกัดผ่านสัจจะวัสดุหินกรวด หินธรรมชาติ และมอสเขียว เหมาะสำหรับบ้านทาวน์โฮมเพื่อพักผ่อนสายตาและสร้างความสงบภายในจิตใจ</p>
+					<div class="featured-garden-credit">
+						<p>ออกแบบโดย <span>Atelier Landscape</span></p>
+						<a href="house-detail.html#designer">ดูผลงานเพิ่มเติม</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="garden-ideas" id="garden-ideas" aria-labelledby="ideas-title">
+				<h2 id="ideas-title">ไอเดียการจัดสวนยอดนิยม</h2>
+				<div class="garden-idea-list">
+					<article class="garden-idea" id="zen-garden">
+						<a href="house-detail.html" aria-label="ดูไอเดียจัดสวนรอบเฉลียงบ้าน">
+							<img src="../imgs/idea1.jpg" alt="เฉลียงไม้พร้อมที่นั่งและต้นไม้รอบบ้าน" />
+						</a>
+						<div class="garden-idea-info">
+							<h3>สวนรอบเฉลียง เพิ่มพื้นที่พักผ่อน</h3>
+							<p class="garden-idea-meta"><span>พื้นที่ 38 ตร.ม.</span><span>BaanRak Studio</span></p>
+						</div>
+					</article>
+
+					<article class="garden-idea" id="tropical-garden">
+						<a href="house-detail.html" aria-label="ดูไอเดียสวนป่าเขตร้อน">
+							<img src="../imgs/idea2.jpg" alt="สวนป่าเขตร้อนที่เต็มไปด้วยไม้ใบและพรรณไม้หลากชนิด" />
+						</a>
+						<div class="garden-idea-info">
+							<h3>สวนป่าเขตร้อน เติมความสดชื่นให้บ้าน</h3>
+							<p class="garden-idea-meta"><span>พื้นที่ 45 ตร.ม.</span><span>Atelier Landscape</span></p>
+						</div>
+					</article>
+
+					<article class="garden-idea" id="vertical-garden">
+						<a href="house-detail.html" aria-label="ดูไอเดียเพิ่มพื้นที่สีเขียวในบ้าน">
+							<img src="../imgs/idea3.jpg" alt="ห้องนั่งเล่นโทนสว่างตกแต่งด้วยต้นไม้กระถาง" />
+						</a>
+						<div class="garden-idea-info">
+							<h3>เพิ่มมุมสีเขียวในบ้านด้วยไม้กระถาง</h3>
+							<p class="garden-idea-meta"><span>พื้นที่ 16 ตร.ม.</span><span>GreenCraft Group</span></p>
+						</div>
+					</article>
+
+					<article class="garden-idea" id="rooftop-garden">
+						<a href="house-detail.html" aria-label="ดูไอเดียจัดพื้นที่นั่งเล่นริมสวน">
+							<img src="../imgs/idea1.jpg" alt="มุมนั่งเล่นกลางแจ้งริมสวนและเฉลียงไม้" />
+						</a>
+						<div class="garden-idea-info">
+							<h3>มุมนั่งเล่นกลางสวนสำหรับวันพักผ่อน</h3>
+							<p class="garden-idea-meta"><span>พื้นที่ 60 ตร.ม.</span><span>La Provence Garden</span></p>
+						</div>
+					</article>
+
+					<article class="garden-idea" id="balcony-garden">
+						<a href="house-detail.html" aria-label="ดูไอเดียสวนเขตร้อนรอบบ้าน">
+							<img src="../imgs/idea2.jpg" alt="พรรณไม้เขตร้อนปลูกหนาแน่นสร้างมุมสีเขียว" />
+						</a>
+						<div class="garden-idea-info">
+							<h3>สวนเขตร้อนดูแลง่ายด้วยพรรณไม้ทนร่ม</h3>
+							<p class="garden-idea-meta"><span>พื้นที่ 28 ตร.ม.</span><span>Studio Leaf Design</span></p>
+						</div>
+					</article>
+
+					<article class="garden-idea">
+						<a href="house-detail.html" aria-label="ดูไอเดียจัดมุมต้นไม้ในบ้าน">
+							<img src="../imgs/idea3.jpg" alt="ต้นไม้กระถางตกแต่งมุมพักผ่อนในบ้าน" />
+						</a>
+						<div class="garden-idea-info">
+							<h3>จัดมุมต้นไม้กระถาง เพิ่มชีวิตชีวาในบ้าน</h3>
+							<p class="garden-idea-meta"><span>พื้นที่ 8 ตร.ม.</span><span>Studio BaanBaan</span></p>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<!--============================= Footer =============================-->
+		<footer>
+			<div class="top-footer">
+				<div class="logo">
+					<p class="logo-name">BaanSuan</p>
+					<p>
+						แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย
+						พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด
+					</p>
+				</div>
+				<div class="menu">
+					<div class="cate">
+						<div><p class="menu-head">ประเภทแบบบ้าน</p></div>
+						<p class="cate-t">บ้านโมเดิร์น</p>
+						<p class="cate-t">บ้านมินิมอล</p>
+						<p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
+						<p class="cate-t">ทาวน์โฮมสองชั้น</p>
+					</div>
+					<div class="cate">
+						<div><p class="menu-head">บริการจัดสวน</p></div>
+						<p class="cate-t">จัดสวนอังกฤษ</p>
+						<p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
+						<p class="cate-t">สวนหินดูแลง่าย</p>
+						<p class="cate-t">ระเบียงพืชพรรณ</p>
+					</div>
+					<div class="cate">
+						<div><p class="menu-head">สมาคมผู้รับเหมา</p></div>
+						<p class="cate-t">ค้นหาผู้รับเหมา</p>
+						<p class="cate-t">มาตรฐานบริการ</p>
+						<p class="cate-t">รีวิวจากลูกค้า</p>
+						<p class="cate-t">สมัครเป็นพันธมิตร</p>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="copy-text">
+					<p>&copy; 2026 BaanSuan. All rights reserved.</p>
+				</div>
+				<div class="contact">
+					<div class="foot-icon">
+						<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<div class="foot-icon">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<div class="foot-icon">
+						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--============================= End Footer =============================-->
+	</body>
+</html>
