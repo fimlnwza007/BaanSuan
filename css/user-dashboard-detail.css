@@ -241,7 +241,7 @@
 .contractor-profile {
 	display: flex;
 	align-items: center;
-	
+	gap: 12px;
 	margin: 16px 0;
 }
 

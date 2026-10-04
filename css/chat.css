@@ -1,0 +1,500 @@
+.chat-layout {
+    display: flex;
+    height: 100vh;
+    max-width: none;
+    margin: 0;
+}
+
+
+
+.dashboard-shell {
+    padding: 0;
+}
+
+.conversation-list {
+    padding: 0;
+    background-color: white;
+    width: 360px;
+    height: 100%;
+    border-right: 1px solid #E8E2D9;
+}
+
+.conversation-list-header {
+    padding: 24px;
+}
+
+.chat-title {
+    margin-bottom: 16px;
+}
+
+.search-box {
+    padding: 12px;
+    height: 42px;
+    width: 100%;
+    background-color: #FAF6F0;
+    border-radius: 8px;
+    border: none;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+.conversation-item {
+    width: 100%;
+    padding: 16px 24px;
+    display: flex;
+
+    gap: 12px;
+    border: 1px solid #E8E2D9;
+    border-left: 0px;
+    background-color: white;
+}
+
+.is-active {
+    background-color: #f5ece6;
+    border: none;
+}
+
+.conversation-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.conversation-meta {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+}
+
+.conversation-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:4px;
+}
+
+.conversation-name {
+    color: #2B2A27;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.conversation-preview {
+    color: #53514E;
+    font-size: 13px;
+}
+
+.conversation-thread {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    background-color: #faf6f0;
+}
+
+.thread-header {
+    display: flex;
+    gap: 12px;
+    padding: 16px 32px;
+    background-color: white;
+}
+
+.thread-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.thread-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B2A27;
+}
+
+.thread-header p {
+    font-size: 12px;
+    color: #8C8983;
+}
+
+.online-indicator {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    background-color: #7A927B;
+}
+
+.thread-project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    background-color: #F5ECE6;
+    border: 1px solid #E8E2D9;
+    text-decoration: none;
+}
+
+.thread-project div {
+    display: flex;
+    align-items: center;
+}
+
+.thread-project img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.thread-project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thread-project-text strong {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2B2A27;
+}
+
+.thread-project-text small {
+    font-size: 11px;
+    color: #53514E;
+}
+
+.project-link-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #C96A53;
+}
+
+.message-content p{
+    
+    max-width: 380px;
+    padding: 16px;
+    border-radius: 12px 12px 12px 0;
+    background-color: white;
+}
+
+.message-row {
+    display: flex;
+    padding: 32px;
+    background-color: #faf6f0;
+}
+
+.message-row img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0;
+    margin-right: 12px;
+}
+
+.message-row.received > img {
+    align-self: flex-end;
+}
+
+.quote-card {
+    max-width: 340px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.quote-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote-card h3 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #C96A53;
+}
+
+.quote-amount {
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: 900;
+    color: #2B2A27;
+}
+
+.quote-amount + p {
+    font-size: 12px;
+    color: #53514E;
+    margin-bottom: 16px;
+}
+
+.quote-card p {
+    padding: 0;
+}
+
+.quote-card a {
+    display: block;
+    padding: 10px 16px;
+    width: 100%;
+    background-color: #C96A53;
+    border-radius: 8px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none
+}
+
+.attachment-preview {
+    max-width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 24px 0;
+}
+
+.attachment-preview img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sent {
+    
+    max-width: 380px;
+    padding: 16px;
+    background-color: #C96A53;
+    border-radius: 12px 12px 0 12px;
+    margin-left: auto;
+    color: white;
+    margin-right: 32px;
+}
+
+.message-composer {
+    display: flex;
+    gap: 16px;
+    background-color: white;
+    padding: 24px;
+    align-items: center;
+}
+
+.message-composer .btn {
+    flex: 0 0 auto;
+}
+
+.message-composer button[type="button"] {
+    display: grid;
+    flex: 0 0 36px;
+    place-items: center;
+    border-radius: 8px;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    gap: 12px;
+}
+
+.message-composer label input {
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 8px;
+    padding: 12px;
+    border: none;
+    background-color: #FAF6F0;
+    font: inherit;
+}
+
+.message-composer label {
+    flex: 1;
+    min-width: 0;
+}
+
+.message-composer button[type="submit"] {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 10px 20px;
+    background-color: #C96A53;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 680px) {
+    .chat-layout {
+        flex-direction: column;
+    }
+
+    .conversation-list {
+        width: 100%;
+        height: 176px;
+        flex: 0 0 176px;
+        overflow: hidden;
+        border-right: 0;
+        border-bottom: 1px solid #E8E2D9;
+    }
+
+    .conversation-list-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .conversation-list-header h1 {
+        font-size: 18px;
+    }
+
+    .conversation-search {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-box {
+        height: 38px;
+        padding: 8px 10px;
+    }
+
+    .conversation-items {
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+    }
+
+    .conversation-item {
+        width: 240px;
+        min-width: 0;
+        flex: 0 0 240px;
+        gap: 8px;
+        padding: 10px 12px;
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .conversation-copy {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .conversation-name,
+    .conversation-preview {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .conversation-meta,
+    .conversation-time {
+        display: none;
+    }
+
+    .conversation-thread {
+        flex: 1;
+        min-height: 0;
+    }
+
+    .thread-header,
+    .thread-project {
+        padding: 10px 12px;
+    }
+
+    .thread-header h2 {
+        font-size: 14px;
+    }
+
+    .thread-project img {
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+    }
+
+    .thread-project-text strong {
+        font-size: 12px;
+    }
+
+    .project-link-label {
+        max-width: 105px;
+        font-size: 11px;
+        text-align: right;
+    }
+
+    .message-history {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .message-row {
+        padding: 12px;
+    }
+
+    .message-content,
+    .message-content p,
+    .quote-card {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .message-content p {
+        padding: 12px;
+    }
+
+    .attachment-preview {
+        max-width: min(280px, 100%);
+        box-sizing: border-box;
+        margin: 14px 0;
+    }
+
+    .quote-card {
+        padding: 14px;
+    }
+
+    .quote-card a {
+        box-sizing: border-box;
+    }
+
+    .sent {
+        max-width: 90%;
+        margin-right: 12px;
+        padding: 12px;
+    }
+
+    .message-composer {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .btn {
+        gap: 6px;
+    }
+
+    .message-composer button[type="submit"] {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
