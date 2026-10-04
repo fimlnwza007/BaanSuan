@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>บ้านโมเดิร์นทรอปิคอล ยกพื้นใต้ถุนสูง | BaanSuan</title>
+    <link rel="stylesheet" href="../css/user_profile.css" />
+    <link rel="stylesheet" href="../css/house-detail.css" />
+  </head>
+  <body>
+    <!--============================= Header =============================-->
+    <header>
+      <div class="head-logo">
+        <div class="logo-img">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z"
+              stroke="#FAF6F0"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <p>BaanSuan</p>
+      </div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="เปิดเมนูหลัก"
+        aria-controls="header-menu"
+        aria-expanded="false"
+        onclick="
+          const isOpen = this.parentElement.toggleAttribute('data-menu-open');
+          this.setAttribute('aria-expanded', isOpen);
+          this.setAttribute(
+            'aria-label',
+            isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก',
+          );
+        "
+      >
+        <svg
+          class="menu-open-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M3 5H17M3 10H17M3 15H17"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+        </svg>
+        <svg
+          class="menu-close-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 4L16 16M16 4L4 16"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+      <div class="header-menu" id="header-menu">
+        <nav aria-label="เมนูหลัก">
+          <ul>
+            <li><a href="house-lookbook.html">บ้าน</a></li>
+            <li><a href="">สวน</a></li>
+            <li><a href="house-detail.html#designer">หาผู้รับเหมา</a></li>
+            <li><a href="">บทความ</a></li>
+            <li><a href="">เกี่ยวกับเรา</a></li>
+          </ul>
+        </nav>
+        <div class="login-section">
+          <a class="login" href="user-dashboard.html#overview">เข้าสู่ระบบ</a>
+          <a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
+        </div>
+      </div>
+    </header>
+    <!--============================= End Header =============================-->
+
+    <main>
+      <div class="content">
+        <article>
+          <div class="house-img">
+            <div class="banner-bg">
+              <img
+                src="../imgs/idea1.jpg"
+                alt="มุมระเบียงบ้านโมเดิร์นท่ามกลางสวนเขียว"
+              />
+            </div>
+
+            <div class="house-list" aria-label="ภาพเพิ่มเติมของบ้าน">
+              <section>
+                <img
+                  src="../imgs/idea1.jpg"
+                  alt="ระเบียงบ้านและพื้นที่นั่งเล่นกลางแจ้ง"
+                />
+              </section>
+              <section>
+                <img src="../imgs/idea2.jpg" alt="สวนเขียวรอบบ้าน" />
+              </section>
+              <section>
+                <img src="../imgs/idea3.jpg" alt="ตัวอย่างบรรยากาศภายในบ้าน" />
+              </section>
+            </div>
+          </div>
+
+          <div class="article-head">
+            <p class="house-type">โมเดิร์นทรอปิคอล</p>
+            <p>งบประมาณ 2.8 – 3.5 ล้านบาท</p>
+          </div>
+          <h1 class="house-name">บ้านโมเดิร์นทรอปิคอล ยกพื้นใต้ถุนสูง</h1>
+
+          <div class="house-list" id="plan" aria-label="ข้อมูลแบบบ้าน">
+            <section>
+              <div class="house-info">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 20V12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12V20M1 9.00048C0.99993 8.70955 1.06333 8.4221 1.18579 8.1582C1.30824 7.89429 1.4868 7.66028 1.709 7.47248L8.709 1.47248C9.06999 1.16739 9.52736 1 10 1C10.4726 1 10.93 1.16739 11.291 1.47248L18.291 7.47248C18.5132 7.66028 18.6918 7.89429 18.8142 8.1582C18.9367 8.4221 19.0001 8.70955 19 9.00048V18.0005C19 18.5309 18.7893 19.0396 18.4142 19.4147C18.0391 19.7898 17.5304 20.0005 17 20.0005H3C2.46957 20.0005 1.96086 19.7898 1.58579 19.4147C1.21071 19.0396 1 18.5309 1 18.0005V9.00048Z"
+                    stroke="#C96A53"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <p>พื้นที่ใช้สอย</p>
+                <h2>180 ตร.ม.</h2>
+              </div>
+            </section>
+            <section>
+              <div class="house-info">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_6_839)">
+                    <path
+                      d="M16.0011 11L18.0013 13L22.0016 9M16.0011 21V19C16.0011 17.9391 15.5797 16.9217 14.8295 16.1716C14.0792 15.4214 13.0618 15 12.0008 15H6.00032C4.93937 15 3.92187 15.4214 3.17167 16.1716C2.42146 16.9217 2 17.9391 2 19V21M13.0009 7C13.0009 9.20914 11.2099 11 9.00056 11C6.79124 11 5.00024 9.20914 5.00024 7C5.00024 4.79086 6.79124 3 9.00056 3C11.2099 3 13.0009 4.79086 13.0009 7Z"
+                      stroke="#C96A53"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6_839">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>ห้องนอน</p>
+                <h2>3 ห้องนอน</h2>
+              </div>
+            </section>
+            <section>
+              <div class="house-info">
+                <svg
+                  width="21"
+                  height="22"
+                  viewBox="0 0 21 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 20.8397C1 17.8395 2.8501 15.4794 6.08028 14.8394C8.50042 14.3594 11.0006 12.8393 12.0006 11.8393M10.0002 19.8396C8.2442 19.8449 6.5503 19.1901 5.25449 18.005C3.95868 16.8198 3.15562 15.191 3.00458 13.4415C2.85354 11.6919 3.36556 9.94957 4.43908 8.55989C5.5126 7.17021 7.0692 6.23475 8.80017 5.93904C14.5005 4.83899 16.0006 4.31897 18.0007 1.83887C19.0007 3.83895 20.0008 6.01904 20.0008 9.8392C20.0008 15.3394 15.2205 19.8396 10.0002 19.8396Z"
+                    stroke="#C96A53"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <p>ห้องน้ำ</p>
+                <h2>2 ห้องน้ำ</h2>
+              </div>
+            </section>
+            <section>
+              <div class="house-info">
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.0011 19V3C15.0011 2.46957 14.7904 1.96086 14.4153 1.58579C14.0402 1.21071 13.5314 1 13.001 1H9.00064C8.47016 1 7.96142 1.21071 7.58631 1.58579C7.21121 1.96086 7.00048 2.46957 7.00048 3V19M3.00016 5H19.0014C20.1061 5 21.0016 5.89543 21.0016 7V17C21.0016 18.1046 20.1061 19 19.0014 19H3.00016C1.8955 19 1 18.1046 1 17V7C1 5.89543 1.8955 5 3.00016 5Z"
+                    stroke="#C96A53"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <p>ที่จอดรถ</p>
+                <h2>2 คัน</h2>
+              </div>
+            </section>
+          </div>
+
+          <nav aria-label="รายละเอียดแบบบ้าน">
+            <a class="current" href="#details">รายละเอียด</a>
+            <a href="#plan">แบบบ้าน</a>
+            <a href="#materials">วัสดุที่ใช้</a>
+            <a href="#estimate">ประมาณราคา</a>
+          </nav>
+
+          <section class="details" id="details">
+            <p class="top">
+              บ้านโมเดิร์นทรอปิคอลออกแบบให้เข้ากับอากาศร้อนชื้น
+              ยกพื้นใต้ถุนสูงเพื่อช่วยระบายอากาศและป้องกันความชื้น
+              พื้นที่นั่งเล่นเปิดรับวิวสวน เชื่อมต่อกับเฉลียงและพื้นที่กลางแจ้ง
+              เหมาะกับครอบครัวที่ต้องการบ้านโปร่งสบายและใกล้ชิดธรรมชาติ
+            </p>
+            <br />
+            <p id="materials">
+              การจัดวางช่องเปิดช่วยรับแสงธรรมชาติ
+              พร้อมชายคาที่ยื่นยาวเพื่อบังแดดและฝน
+              เลือกใช้วัสดุโทนอบอุ่นให้บ้านดูทันสมัยและกลมกลืนกับพื้นที่สีเขียว
+            </p>
+          </section>
+
+          <section class="near">
+            <h2>แบบบ้านใกล้เคียงที่คุณอาจชอบ</h2>
+            <div class="house-list2">
+              <section>
+                <img
+                  src="../imgs/idea1.jpg"
+                  alt="บ้านที่มีเฉลียงไม้และสวนร่มรื่น"
+                />
+                <div class="house-info2">
+                  <h2>บ้านพักผ่อนท่ามกลางสวน</h2>
+                  <p>บ้านชั้นเดียว · 200 ตร.ม.</p>
+                </div>
+              </section>
+              <section>
+                <img
+                  src="../imgs/idea2.jpg"
+                  alt="สวนเขียวสำหรับบ้านสไตล์ทรอปิคอล"
+                />
+                <div class="house-info2">
+                  <h2>บ้านโมเดิร์นกลางสวน</h2>
+                  <p>บ้านสองชั้น · 210 ตร.ม.</p>
+                </div>
+              </section>
+              <section>
+                <img
+                  src="../imgs/idea3.jpg"
+                  alt="ห้องนั่งเล่นสไตล์โมเดิร์นโทนอบอุ่น"
+                />
+                <div class="house-info2">
+                  <h2>บ้านโมเดิร์นโทนอบอุ่น</h2>
+                  <p>บ้านสองชั้น · 180 ตร.ม.</p>
+                </div>
+              </section>
+            </div>
+          </section>
+        </article>
+
+        <aside>
+          <section class="favorite" id="designer">
+            <p class="house-designer">ผู้ออกแบบแบบบ้านนี้</p>
+            <div class="fav-head">
+              <div class="head-icon-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_6_890)">
+                    <path
+                      d="M16.0011 19.999V3.99902C16.0011 3.46859 15.7904 2.95988 15.4153 2.58481C15.0402 2.20974 14.5314 1.99902 14.001 1.99902H10.0006C9.47016 1.99902 8.96142 2.20974 8.58631 2.58481C8.21121 2.95988 8.00048 3.46859 8.00048 3.99902V19.999M4.00016 5.99902H20.0014C21.1061 5.99902 22.0016 6.89445 22.0016 7.99902V17.999C22.0016 19.1036 21.1061 19.999 20.0014 19.999H4.00016C2.8955 19.999 2 19.1036 2 17.999V7.99902C2 6.89445 2.8955 5.99902 4.00016 5.99902Z"
+                      stroke="#7A927B"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6_890">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="fav-text">
+                <h2>GreenCraft Studio</h2>
+                <p>★ 4.9 (124 รีวิว)</p>
+              </div>
+            </div>
+            <p>
+              "ผู้นำด้านการออกแบบที่อยู่อาศัยสไตล์เป็นมิตรกับสิ่งแวดล้อมและผสมผสานธรรมชาติ"
+            </p>
+            <p class="foot-fav">
+              <svg
+                width="13"
+                height="10"
+                viewBox="0 0 13 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.6656 1L4.333 8.3328L1 4.99971"
+                  stroke="#7A927B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              ผู้ให้บริการที่ผ่านการตรวจสอบข้อมูล
+            </p>
+          </section>
+          <section class="favorite intere" id="estimate">
+            <h2>สนใจสร้างบ้านดีไซน์นี้?</h2>
+            <p>เรามีบริการแนะนำผู้รับเหมาที่พร้อมก่อสร้างตามแบบนี้ในพื้นที่ของคุณ พร้อมควบคุมมาตรฐานงานผ่าน BaanSuan Trust</p>
+            <a class="contractor" href="user-dashboard.html#appointment">ขอประเมินราคาพื้นที่ของคุณ</a>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <!--============================= Footer =============================-->
+    <footer>
+      <div class="top-footer">
+        <div class="logo">
+          <p class="logo-name">BaanSuan</p>
+          <p>
+            แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย
+            พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด
+          </p>
+        </div>
+        <div class="menu">
+          <div class="cate">
+            <p class="menu-head">ประเภทแบบบ้าน</p>
+            <p class="cate-t">บ้านโมเดิร์น</p>
+            <p class="cate-t">บ้านมินิมอล</p>
+            <p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
+            <p class="cate-t">ทาวน์โฮมสองชั้น</p>
+          </div>
+          <div class="cate">
+            <p class="menu-head">บริการจัดสวน</p>
+            <p class="cate-t">จัดสวนอังกฤษ</p>
+            <p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
+            <p class="cate-t">สวนหินดูแลง่าย</p>
+            <p class="cate-t">ระเบียงพืชพรรณ</p>
+          </div>
+          <div class="cate">
+            <p class="menu-head">สมาคมผู้รับเหมา</p>
+            <p class="cate-t">ค้นหาผู้รับเหมา</p>
+            <p class="cate-t">มาตรฐานบริการ</p>
+            <p class="cate-t">รีวิวจากลูกค้า</p>
+            <p class="cate-t">สมัครเป็นพันธมิตร</p>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="copy-text">
+          <p>&copy; 2026 BaanSuan. All rights reserved.</p>
+        </div>
+        <div class="contact">
+          <div class="foot-icon" aria-label="Facebook">
+            <svg
+              width="10"
+              height="16"
+              viewBox="0 0 10 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z"
+                stroke="#FAF6F0"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="foot-icon" aria-label="Instagram">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z"
+                stroke="#FAF6F0"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="foot-icon" aria-label="สถิติ BaanSuan">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5"
+                stroke="#FAF6F0"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--============================= End Footer =============================-->
+  </body>
+</html>

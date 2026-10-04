@@ -91,6 +91,8 @@ body {
     .login {
         color: #2B2A27;
         font-weight: 600;
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 
     .contractor {
@@ -99,6 +101,8 @@ body {
         padding: 12px 24px;
         color: white;
         font-weight: bold;
+        flex-shrink: 0;
+        white-space: nowrap;
         transition: all 0.3s ease;
     }
 

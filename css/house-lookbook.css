@@ -267,7 +267,8 @@ article {
     gap: 12px;
 }
 
-.nav-foot a {
+.nav-foot a,
+.nav-foot span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +280,12 @@ article {
     border: 1px solid #E8E2D9;
 }
 
-.nav-foot a.current {
+.nav-foot span[aria-disabled="true"] {
+    color: #8C8983;
+    opacity: 0.5;
+}
+
+.nav-foot .current {
     background-color: #C96A53;
     color: white;
 }
