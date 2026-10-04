@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>สมัครสมาชิก | BaanSuan</title>
+    <meta name="description" content="สมัครสมาชิก BaanSuan บันทึกแบบบ้าน ค้นหาไอเดีย และเชื่อมต่อผู้รับเหมาทันที" />
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body class="page-auth page-register">
+    <header class="site-header">
+      <a class="brand" href="homepage.html">
+        <span class="brand-mark">♧</span>
+        <span><strong>BaanSuan</strong><small>บ้านและสวน</small></span>
+      </a>
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <a href="homepage.html">บ้าน</a>
+        <a href="garden-detail.html">สวน</a>
+        <a href="../../html/contractor-list.html">หาผู้รับเหมา</a>
+        <a href="../../html/house-lookbook.html">บทความ</a>
+        <a href="about-contact-page.html">เกี่ยวกับเรา</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login-link" href="login.html">เข้าสู่ระบบ</a>
+        <a class="button button-small" href="register.html">ลงทะเบียนผู้รับเหมา</a>
+      </div>
+    </header>
+    <main class="register-wrap">
+      <section class="register-card">
+        <div class="register-icon">♧</div>
+        <h1>สมัครสมาชิก BaanSuan</h1>
+        <p class="register-intro">บันทึกแบบบ้าน ค้นหาไอเดีย และเชื่อมต่อผู้รับเหมาทันที</p>
+        <div class="steps">
+          <span class="step-active"><b>1</b> ข้อมูลส่วนตัว</span>
+          <i></i>
+          <span><b>2</b> ยืนยันตัวตน</span>
+          <i></i>
+          <span><b>3</b> เสร็จสิ้น</span>
+        </div>
+        <form action="../../html/user_profile.html">
+          <fieldset class="account-types">
+            <legend>ฉันต้องการสมัครสมาชิกในฐานะ:</legend>
+            <label class="account-choice">
+              <input type="radio" name="role" value="owner" checked />
+              <span class="choice-icon">⌂</span>
+              <span><strong>เจ้าของบ้าน</strong><small>หาแบบบ้านและสวน ค้นหาผู้รับเหมา</small></span>
+            </label>
+            <label class="account-choice">
+              <input type="radio" name="role" value="professional" />
+              <span class="choice-icon">▣</span>
+              <span><strong>ผู้รับเหมา / นักออกแบบ</strong><small>ลงทะเบียนรับงาน โปรโมตผลงานและสตูดิโอ</small></span>
+            </label>
+          </fieldset>
+          <div class="form-two">
+            <label>ชื่อ<input required placeholder="สมชาย" /></label>
+            <label>นามสกุล<input required placeholder="ดีเลิศ" /></label>
+          </div>
+          <label>อีเมล<input type="email" required placeholder="somchai@email.com" /></label>
+          <label>เบอร์โทรศัพท์<input type="tel" required placeholder="081–234–5678" /></label>
+          <label>รหัสผ่าน<input type="password" required minlength="8" placeholder="••••••••••••" /></label>
+          <label class="terms-check"><input type="checkbox" required /> ฉันยอมรับข้อตกลงและเงื่อนไขการใช้งาน รวมถึงนโยบายความเป็นส่วนตัวของ BaanSuan</label>
+          <button class="button button-full" type="submit">ดำเนินการต่อ</button>
+        </form>
+        <p class="auth-switch">มีบัญชีผู้ใช้แล้ว? <a href="login.html">เข้าสู่ระบบ</a></p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a class="brand brand-light" href="homepage.html">
+            <span class="brand-mark">♧</span>
+            <span><strong>BaanSuan</strong><small>บ้านและสวน</small></span>
+          </a>
+          <p>แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด</p>
+        </div>
+        <div>
+          <h3>ประเภทแบบบ้าน</h3>
+          <a href="../../html/house-lookbook.html">บ้านโมเดิร์น</a>
+          <a href="../../html/house-lookbook.html">บ้านมินิมอล</a>
+          <a href="../../html/house-lookbook.html">บ้านสไตล์ไทยร่วมสมัย</a>
+          <a href="../../html/house-lookbook.html">ทาวน์โฮมสองชั้น</a>
+        </div>
+        <div>
+          <h3>บริการจัดสวน</h3>
+          <a href="garden-detail.html">จัดสวนอังกฤษ</a>
+          <a href="garden-detail.html">จัดสวนญี่ปุ่น</a>
+          <a href="garden-detail.html">สวนหินดูแลง่าย</a>
+          <a href="garden-detail.html">ระเบียงพืชพรรณ</a>
+        </div>
+        <div>
+          <h3>สมาคมผู้รับเหมา</h3>
+          <a href="../../html/contractor-list.html">ค้นหาผู้รับเหมา</a>
+          <a href="contractor-profile.html">มาตรฐานบริการ</a>
+          <a href="contractor-profile.html">รีวิวจากลูกค้า</a>
+          <a href="register.html">สมัครเป็นพันธมิตร</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BaanSuan. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" class="social-icon">f</a>
+          <a href="#" aria-label="Instagram" class="social-icon">◫</a>
+          <a href="#" aria-label="LINE" class="social-icon">⌁</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,379 +1,287 @@
 <!doctype html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ค้นหาผู้รับเหมาและนักออกแบบ | BaanSuan</title>
-    <link rel="stylesheet" href="../css/user_profile.css" />
-    <link rel="stylesheet" href="../css/contractor-list.css" />
-  </head>
-  <body>
-    <!--============================= Header =============================-->
-    <header>
-      <div class="head-logo">
-        <div class="logo-img">
-          <svg
-            width="17"
-            height="17"
-            viewBox="0 0 17 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z"
-              stroke="#FAF6F0"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </div>
-        <p>BaanSuan</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ค้นหาผู้รับเหมาและนักออกแบบ | BaanSuan</title>
+  <link rel="stylesheet" href="../css/user_profile.css" />
+  <link rel="stylesheet" href="../css/contractor-list.css" />
+</head>
+
+<body>
+  <!--============================= Header =============================-->
+  <header>
+    <div class="head-logo">
+      <div class="logo-img">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path
+            d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z"
+            stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+        </svg>
       </div>
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="เปิดเมนูหลัก"
-        aria-controls="header-menu"
-        aria-expanded="false"
-        onclick="
+      <p>BaanSuan</p>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="เปิดเมนูหลัก" aria-controls="header-menu"
+      aria-expanded="false" onclick="
           const isOpen = this.parentElement.toggleAttribute('data-menu-open');
           this.setAttribute('aria-expanded', isOpen);
           this.setAttribute(
             'aria-label',
             isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก',
           );
-        "
-      >
-        <svg
-          class="menu-open-icon"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M3 5H17M3 10H17M3 15H17"
-            stroke="currentColor"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-        </svg>
-        <svg
-          class="menu-close-icon"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M4 4L16 16M16 4L4 16"
-            stroke="currentColor"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
-      <div class="header-menu" id="header-menu">
-        <nav aria-label="เมนูหลัก">
-          <ul>
-            <li><a href="house-lookbook.html">บ้าน</a></li>
-            <li><a href="garden-lookbook.html">ไอเดียสวน</a></li>
-            <li>
-              <a href="contractor-list.html" aria-current="page"
-                >หาผู้รับเหมา</a
-              >
-            </li>
-            <li><a href="">บทความ</a></li>
-            <li><a href="">เกี่ยวกับเรา</a></li>
-          </ul>
-        </nav>
-        <div class="login-section">
-          <a class="login" href="user-dashboard.html#overview">เข้าสู่ระบบ</a>
-          <a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
-        </div>
-      </div>
-    </header>
-    <!--============================= End Header =============================-->
-
-    <main>
-      <section class="contractor-heading" aria-labelledby="page-title">
-        <h1 id="page-title">ค้นหาผู้รับเหมาและนักออกแบบที่ผ่านการตรวจสอบ</h1>
-        <p>
-          พบผู้เชี่ยวชาญที่มีผลงานจริง มีข้อมูลน่าเชื่อถือ
-          พร้อมคำแนะนำและรีวิวจากผู้ใช้บริการบน BaanSuan
-        </p>
-      </section>
-
-      <section class="contractor-search" aria-label="ค้นหาและกรองผู้รับเหมา">
-        <form action="#contractor-results" method="get">
-          <div class="left">
-            <label>
-              <input
-                type="search"
-                name="q"
-                placeholder="ค้นหาชื่อบริษัท หรือความเชี่ยวชาญ..."
-              />
-            </label>
-            <label>
-              <select name="area">
-                <option value="">กรุงเทพและปริมณฑล</option>
-                <option value="bangkok">กรุงเทพมหานคร</option>
-                <option value="nakhon-pathom">นครปฐม</option>
-                <option value="nonthaburi">นนทบุรี</option>
-              </select>
-            </label>
-            <label>
-              <select name="service">
-                <option value="">ออกแบบและก่อสร้าง</option>
-                <option value="garden">จัดสวน</option>
-                <option value="home">ออกแบบบ้าน</option>
-                <option value="interior">ตกแต่งภายใน</option>
-              </select>
-            </label>
-          </div>
-          <a class="map-view" href="#contractor-results"
-            ><svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.5 1C5.26726 1 5.0377 1.05416 4.8295 1.1582L1.41475 2.86595C1.29019 2.92819 1.18542 3.02388 1.11217 3.1423C1.03891 3.26073 1.00008 3.3972 1 3.53645V13.1087C0.999686 13.2367 1.03213 13.3626 1.09424 13.4745C1.15635 13.5864 1.24606 13.6806 1.35484 13.748C1.46362 13.8154 1.58784 13.8539 1.71569 13.8598C1.84354 13.8656 1.97077 13.8387 2.08525 13.7814L4.8295 12.4089C5.0377 12.3049 5.26726 12.2508 5.5 12.2508C5.73275 12.2508 5.9623 12.3049 6.1705 12.4089L9.3295 13.9884C9.5377 14.0925 9.76726 14.1466 10 14.1466C10.2327 14.1466 10.4623 14.0925 10.6705 13.9884L14.0853 12.2807C14.2098 12.2185 14.3146 12.1228 14.3878 12.0043C14.4611 11.8859 14.4999 11.7494 14.5 11.6102V2.0372C14.5002 1.90928 14.4677 1.78344 14.4055 1.67164C14.3433 1.55983 14.2536 1.46579 14.1448 1.39845C14.0361 1.3311 13.9119 1.29269 13.7841 1.28688C13.6563 1.28106 13.5292 1.30802 13.4148 1.3652L10.6705 2.7377C10.4623 2.84174 10.2327 2.8959 10 2.8959C9.76726 2.8959 9.5377 2.84174 9.3295 2.7377L6.1705 1.1582C5.9623 1.05416 5.73275 1 5.5 1ZM10 2.8959L10 14.1455M5.5 1L5.5 12.25"
-                stroke="#C96A53"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-            แสดงแผนที่</a
-          >
-        </form>
-      </section>
-
-      <section
-        class="contractor-results"
-        id="contractor-results"
-        aria-label="รายชื่อผู้รับเหมาและนักออกแบบ"
-      >
-        <div class="c-l">
-          <article class="contractor-card">
-            <img
-              src="../imgs/idea2.jpg"
-              alt="ทีมงานจัดสวนท่ามกลางพรรณไม้เขตร้อน"
-            />
-            <div class="contractor-info">
-              <div class="contractor-title">
-                <div>
-                  <h2>BaanRak Garden &amp; Studio</h2>
-                  <span class="verified">ยืนยันตัวตนแล้ว</span>
-                </div>
-                <p class="rating" aria-label="คะแนน 4.9 จาก 5 จาก 123 รีวิว">
-                  ★ 4.9 (124 รีวิว)
-                </p>
-              </div>
-              <ul class="contractor-tags" aria-label="ความเชี่ยวชาญ">
-                <li>สวนสไตล์ทรอปิคอล</li>
-                <li>สวนเซนญี่ปุ่น</li>
-                <li>ดูแลสวนครบวงจร</li>
-              </ul>
-              <p class="contractor-description">
-                เราสร้างสวนที่ตอบโจทย์การใช้งาน
-                พร้อมออกแบบและจัดสวนอย่างละเอียดโดยทีมงานที่เข้าใจธรรมชาติและการดูแลรักษา
-              </p>
-              <ul class="contractor-meta">
-                <li>กรุงเทพฯ และปริมณฑล</li>
-                <li>ประสบการณ์ 47 โครงการ</li>
-                <li>งบประมาณ 100,000 - 800,000 บาท</li>
-                <li>
-                  <a class="view-contractor" href="house-detail.html#designer"
-                    >ดูโปรไฟล์และผลงาน</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="contractor-card">
-            <img
-              src="../imgs/idea1.jpg"
-              alt="บ้านร่วมสมัยพร้อมพื้นที่สวนรอบบ้าน"
-            />
-            <div class="contractor-info">
-              <div class="contractor-title">
-                <div>
-                  <h2>Nakhon Pathom Construction</h2>
-                  <span class="verified">ยืนยันตัวตนแล้ว</span>
-                </div>
-                <p class="rating" aria-label="คะแนน 4.8 จาก 5 จาก 86 รีวิว">
-                  ★ 4.8 (86 รีวิว)
-                </p>
-              </div>
-              <ul class="contractor-tags" aria-label="ความเชี่ยวชาญ">
-                <li>รับออกแบบและก่อสร้าง</li>
-                <li>สร้างบ้านชั้นเดียว</li>
-                <li>ต่อเติมอาคารทุกชนิด</li>
-              </ul>
-              <p class="contractor-description">
-                ทีมงานก่อสร้างที่ให้ความสำคัญกับคุณภาพและความปลอดภัยตั้งแต่เริ่มต้นจนส่งมอบ
-                พร้อมให้คำปรึกษาเรื่องงบประมาณ
-              </p>
-              <ul class="contractor-meta">
-                <li>อ.เมือง จ.นครปฐม</li>
-                <li>ประสบการณ์ 104 โครงการ</li>
-                <li>งบประมาณ 2 - 8 ล้านบาท</li>
-                <li>
-                  <a class="view-contractor" href="house-detail.html#designer"
-                    >ดูโปรไฟล์และผลงาน</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="contractor-card">
-            <img
-              src="../imgs/idea3.jpg"
-              alt="ห้องนั่งเล่นตกแต่งด้วยเฟอร์นิเจอร์ไม้และโทนสีอบอุ่น"
-            />
-            <div class="contractor-info">
-              <div class="contractor-title">
-                <div>
-                  <h2>Studio Line Interiors</h2>
-                  <span class="verified">ยืนยันตัวตนแล้ว</span>
-                </div>
-                <p class="rating" aria-label="คะแนน 5 จาก 5 จาก 42 รีวิว">
-                  ★ 5.0 (42 รีวิว)
-                </p>
-              </div>
-              <ul class="contractor-tags" aria-label="ความเชี่ยวชาญ">
-                <li>ออกแบบภายใน</li>
-                <li>เฟอร์นิเจอร์บิลท์อิน</li>
-                <li>สไตล์มินิมอล</li>
-              </ul>
-              <p class="contractor-description">
-                สร้างสรรค์พื้นที่ให้ใช้งานได้อย่างลงตัวด้วยดีไซน์อบอุ่นและวัสดุที่คัดสรร
-                เลือกได้ทั้งงานบิลท์อินและออกแบบพื้นที่อยู่อาศัย
-              </p>
-              <ul class="contractor-meta">
-                <li>เขตวัฒนา กรุงเทพมหานคร</li>
-                <li>ประสบการณ์ 35 โครงการ</li>
-                <li>งบประมาณ 300,000 - 1.5 ล้านบาท</li>
-                <li>
-                  <a class="view-contractor" href="house-detail.html#designer"
-                    >ดูโปรไฟล์และผลงาน</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <nav class="contractor-pagination" aria-label="หน้ารายชื่อผู้รับเหมา">
-        <a href="#contractor-results" aria-disabled="true">ย้อนกลับ</a>
-        <a class="now" href="#contractor-results" aria-current="page">1</a>
-        <a href="#contractor-results">2</a>
-        <a href="#contractor-results">ถัดไป</a>
+        ">
+      <svg class="menu-open-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+      </svg>
+      <svg class="menu-close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="header-menu" id="header-menu">
+      <nav aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="house-lookbook.html">บ้าน</a></li>
+          <li><a href="garden-lookbook.html">ไอเดียสวน</a></li>
+          <li>
+            <a href="contractor-list.html" aria-current="page">หาผู้รับเหมา</a>
+          </li>
+          <li><a href="../another10page/html/about-contact-page.html">บทความ</a></li>
+          <li><a href="../another10page/html/about-contact-page.html">เกี่ยวกับเรา</a></li>
+        </ul>
       </nav>
-    </main>
+      <div class="login-section">
+        <a class="login" href="user-dashboard.html#overview">เข้าสู่ระบบ</a>
+        <a class="contractor" href="contractor-form.html">ลงทะเบียนผู้รับเหมา</a>
+      </div>
+    </div>
+  </header>
+  <!--============================= End Header =============================-->
 
-    <!--============================= Footer =============================-->
-    <footer>
-      <div class="top-footer">
-        <div class="logo">
-          <p class="logo-name">BaanSuan</p>
-          <p>
-            แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย
-            พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด
-          </p>
+  <main>
+    <section class="contractor-heading" aria-labelledby="page-title">
+      <h1 id="page-title">ค้นหาผู้รับเหมาและนักออกแบบที่ผ่านการตรวจสอบ</h1>
+      <p>
+        พบผู้เชี่ยวชาญที่มีผลงานจริง มีข้อมูลน่าเชื่อถือ
+        พร้อมคำแนะนำและรีวิวจากผู้ใช้บริการบน BaanSuan
+      </p>
+    </section>
+
+    <section class="contractor-search" aria-label="ค้นหาและกรองผู้รับเหมา">
+      <form action="#contractor-results" method="get">
+        <div class="left">
+          <label>
+            <input type="search" name="q" placeholder="ค้นหาชื่อบริษัท หรือความเชี่ยวชาญ..." />
+          </label>
+          <label>
+            <select name="area">
+              <option value="">กรุงเทพและปริมณฑล</option>
+              <option value="bangkok">กรุงเทพมหานคร</option>
+              <option value="nakhon-pathom">นครปฐม</option>
+              <option value="nonthaburi">นนทบุรี</option>
+            </select>
+          </label>
+          <label>
+            <select name="service">
+              <option value="">ออกแบบและก่อสร้าง</option>
+              <option value="garden">จัดสวน</option>
+              <option value="home">ออกแบบบ้าน</option>
+              <option value="interior">ตกแต่งภายใน</option>
+            </select>
+          </label>
         </div>
-        <div class="menu">
-          <div class="cate">
-            <div><p class="menu-head">ประเภทแบบบ้าน</p></div>
-            <p class="cate-t">บ้านโมเดิร์น</p>
-            <p class="cate-t">บ้านมินิมอล</p>
-            <p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
-            <p class="cate-t">ทาวน์โฮมสองชั้น</p>
+        <a class="map-view" href="#contractor-results"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.5 1C5.26726 1 5.0377 1.05416 4.8295 1.1582L1.41475 2.86595C1.29019 2.92819 1.18542 3.02388 1.11217 3.1423C1.03891 3.26073 1.00008 3.3972 1 3.53645V13.1087C0.999686 13.2367 1.03213 13.3626 1.09424 13.4745C1.15635 13.5864 1.24606 13.6806 1.35484 13.748C1.46362 13.8154 1.58784 13.8539 1.71569 13.8598C1.84354 13.8656 1.97077 13.8387 2.08525 13.7814L4.8295 12.4089C5.0377 12.3049 5.26726 12.2508 5.5 12.2508C5.73275 12.2508 5.9623 12.3049 6.1705 12.4089L9.3295 13.9884C9.5377 14.0925 9.76726 14.1466 10 14.1466C10.2327 14.1466 10.4623 14.0925 10.6705 13.9884L14.0853 12.2807C14.2098 12.2185 14.3146 12.1228 14.3878 12.0043C14.4611 11.8859 14.4999 11.7494 14.5 11.6102V2.0372C14.5002 1.90928 14.4677 1.78344 14.4055 1.67164C14.3433 1.55983 14.2536 1.46579 14.1448 1.39845C14.0361 1.3311 13.9119 1.29269 13.7841 1.28688C13.6563 1.28106 13.5292 1.30802 13.4148 1.3652L10.6705 2.7377C10.4623 2.84174 10.2327 2.8959 10 2.8959C9.76726 2.8959 9.5377 2.84174 9.3295 2.7377L6.1705 1.1582C5.9623 1.05416 5.73275 1 5.5 1ZM10 2.8959L10 14.1455M5.5 1L5.5 12.25"
+              stroke="#C96A53" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          แสดงแผนที่</a>
+      </form>
+    </section>
+
+    <section class="contractor-results" id="contractor-results" aria-label="รายชื่อผู้รับเหมาและนักออกแบบ">
+      <div class="c-l">
+        <article class="contractor-card" id="architect">
+          <img src="../imgs/idea2.jpg" alt="ทีมงานจัดสวนท่ามกลางพรรณไม้เขตร้อน" />
+          <div class="contractor-info">
+            <div class="contractor-title">
+              <div>
+                <h2>BaanRak Garden &amp; Studio</h2>
+                <span class="verified">ยืนยันตัวตนแล้ว</span>
+              </div>
+              <p class="rating" aria-label="คะแนน 4.9 จาก 5 จาก 123 รีวิว">
+                ★ 4.9 (124 รีวิว)
+              </p>
+            </div>
+            <ul class="contractor-tags" aria-label="ความเชี่ยวชาญ">
+              <li>สวนสไตล์ทรอปิคอล</li>
+              <li>สวนเซนญี่ปุ่น</li>
+              <li>ดูแลสวนครบวงจร</li>
+            </ul>
+            <p class="contractor-description">
+              เราสร้างสวนที่ตอบโจทย์การใช้งาน
+              พร้อมออกแบบและจัดสวนอย่างละเอียดโดยทีมงานที่เข้าใจธรรมชาติและการดูแลรักษา
+            </p>
+            <ul class="contractor-meta">
+              <li>กรุงเทพฯ และปริมณฑล</li>
+              <li>ประสบการณ์ 47 โครงการ</li>
+              <li>งบประมาณ 100,000 - 800,000 บาท</li>
+              <li>
+                <a class="view-contractor" href="../another10page/html/contractor-profile.html">ดูโปรไฟล์และผลงาน</a>
+              </li>
+            </ul>
           </div>
-          <div class="cate">
-            <div><p class="menu-head">บริการจัดสวน</p></div>
-            <p class="cate-t">จัดสวนอังกฤษ</p>
-            <p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
-            <p class="cate-t">สวนหินดูแลง่าย</p>
-            <p class="cate-t">ระเบียงพืชพรรณ</p>
+        </article>
+
+        <article class="contractor-card" id="engineer">
+          <img src="../imgs/idea1.jpg" alt="บ้านร่วมสมัยพร้อมพื้นที่สวนรอบบ้าน" />
+          <div class="contractor-info">
+            <div class="contractor-title">
+              <div>
+                <h2>Nakhon Pathom Construction</h2>
+                <span class="verified">ยืนยันตัวตนแล้ว</span>
+              </div>
+              <p class="rating" aria-label="คะแนน 4.8 จาก 5 จาก 86 รีวิว">
+                ★ 4.8 (86 รีวิว)
+              </p>
+            </div>
+            <ul class="contractor-tags" aria-label="ความเชี่ยวชาญ">
+              <li>รับออกแบบและก่อสร้าง</li>
+              <li>สร้างบ้านชั้นเดียว</li>
+              <li>ต่อเติมอาคารทุกชนิด</li>
+            </ul>
+            <p class="contractor-description">
+              ทีมงานวิศวกรและก่อสร้างที่ให้ความสำคัญกับคุณภาพและความปลอดภัยตั้งแต่เริ่มต้นจนส่งมอบ
+              พร้อมให้คำปรึกษาเรื่องงบประมาณ
+            </p>
+            <ul class="contractor-meta">
+              <li>อ.เมือง จ.นครปฐม</li>
+              <li>ประสบการณ์ 104 โครงการ</li>
+              <li>งบประมาณ 2 - 8 ล้านบาท</li>
+              <li>
+                <a class="view-contractor" href="house-detail.html#designer">ดูโปรไฟล์และผลงาน</a>
+              </li>
+            </ul>
           </div>
-          <div class="cate">
-            <div><p class="menu-head">สมาคมผู้รับเหมา</p></div>
-            <p class="cate-t">ค้นหาผู้รับเหมา</p>
-            <p class="cate-t">มาตรฐานบริการ</p>
-            <p class="cate-t">รีวิวจากลูกค้า</p>
-            <p class="cate-t">สมัครเป็นพันธมิตร</p>
+        </article>
+
+        <article class="contractor-card" id="builder">
+          <img src="../imgs/idea3.jpg" alt="ห้องนั่งเล่นตกแต่งด้วยเฟอร์นิเจอร์ไม้และโทนสีอบอุ่น" />
+          <div class="contractor-info">
+            <div class="contractor-title">
+              <div>
+                <h2>Studio Line Interiors &amp; Builders</h2>
+                <span class="verified">ยืนยันตัวตนแล้ว</span>
+              </div>
+              <p class="rating" aria-label="คะแนน 5 จาก 5 จาก 42 รีวิว">
+                ★ 5.0 (42 รีวิว)
+              </p>
+            </div>
+            <ul class="contractor-tags" aria-label="ความเชี่ยวชาญ">
+              <li>ออกแบบภายใน</li>
+              <li>เฟอร์นิเจอร์บิลท์อิน</li>
+              <li>สไตล์มินิมอล</li>
+            </ul>
+            <p class="contractor-description">
+              สร้างสรรค์พื้นที่ให้ใช้งานได้อย่างลงตัวด้วยดีไซน์อบอุ่นและวัสดุที่คัดสรร
+              เลือกได้ทั้งงานบิลท์อินและออกแบบพื้นที่อยู่อาศัย
+            </p>
+            <ul class="contractor-meta">
+              <li>เขตวัฒนา กรุงเทพมหานคร</li>
+              <li>ประสบการณ์ 35 โครงการ</li>
+              <li>งบประมาณ 300,000 - 1.5 ล้านบาท</li>
+              <li>
+                <a class="view-contractor" href="house-detail.html#designer">ดูโปรไฟล์และผลงาน</a>
+              </li>
+            </ul>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <nav class="contractor-pagination" aria-label="หน้ารายชื่อผู้รับเหมา">
+      <a href="#contractor-results" aria-disabled="true">ย้อนกลับ</a>
+      <a class="now" href="#contractor-results" aria-current="page">1</a>
+      <a href="#contractor-results">2</a>
+      <a href="#contractor-results">ถัดไป</a>
+    </nav>
+  </main>
+
+  <!--============================= Footer =============================-->
+  <footer>
+    <div class="top-footer">
+      <div class="logo">
+        <p class="logo-name">BaanSuan</p>
+        <p>
+          แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย
+          พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด
+        </p>
+      </div>
+      <div class="menu">
+        <div class="cate">
+          <div>
+            <p class="menu-head">ประเภทแบบบ้าน</p>
+          </div>
+          <p class="cate-t">บ้านโมเดิร์น</p>
+          <p class="cate-t">บ้านมินิมอล</p>
+          <p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
+          <p class="cate-t">ทาวน์โฮมสองชั้น</p>
+        </div>
+        <div class="cate">
+          <div>
+            <p class="menu-head">บริการจัดสวน</p>
+          </div>
+          <p class="cate-t">จัดสวนอังกฤษ</p>
+          <p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
+          <p class="cate-t">สวนหินดูแลง่าย</p>
+          <p class="cate-t">ระเบียงพืชพรรณ</p>
+        </div>
+        <div class="cate">
+          <div>
+            <p class="menu-head">สมาคมผู้รับเหมา</p>
+          </div>
+          <p class="cate-t">ค้นหาผู้รับเหมา</p>
+          <p class="cate-t">มาตรฐานบริการ</p>
+          <p class="cate-t">รีวิวจากลูกค้า</p>
+          <p class="cate-t">สมัครเป็นพันธมิตร</p>
         </div>
       </div>
-      <div class="copy">
-        <div class="copy-text">
-          <p>&copy; 2026 BaanSuan. All rights reserved.</p>
+    </div>
+    <div class="copy">
+      <div class="copy-text">
+        <p>&copy; 2026 BaanSuan. All rights reserved.</p>
+      </div>
+      <div class="contact">
+        <div class="foot-icon">
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path
+              d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z"
+              stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+          </svg>
         </div>
-        <div class="contact">
-          <div class="foot-icon">
-            <svg
-              width="10"
-              height="16"
-              viewBox="0 0 10 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z"
-                stroke="#FAF6F0"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-          <div class="foot-icon">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z"
-                stroke="#FAF6F0"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-          <div class="foot-icon">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5"
-                stroke="#FAF6F0"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
+        <div class="foot-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path
+              d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z"
+              stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="foot-icon">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path
+              d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5"
+              stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+          </svg>
         </div>
       </div>
-    </footer>
-    <!--============================= End Footer =============================-->
-  </body>
+    </div>
+  </footer>
+  <!--============================= End Footer =============================-->
+</body>
+
 </html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>รายการบันทึกของคุณ | BaanSuan</title>
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body class="page-favorites">
+    <header class="site-header">
+      <a class="brand" href="homepage.html">
+        <span class="brand-mark">♧</span>
+        <span><strong>BaanSuan</strong><small>บ้านและสวน</small></span>
+      </a>
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <a href="homepage.html">บ้าน</a>
+        <a href="garden-detail.html">สวน</a>
+        <a href="../../html/contractor-list.html">หาผู้รับเหมา</a>
+        <a href="../../html/house-lookbook.html">บทความ</a>
+        <a href="about-contact-page.html">เกี่ยวกับเรา</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login-link" href="login.html">เข้าสู่ระบบ</a>
+        <a class="button button-small" href="register.html">ลงทะเบียนผู้รับเหมา</a>
+      </div>
+    </header>
+    <main class="section-wrap favorites-content">
+      <div class="favorites-heading">
+        <div>
+          <h1>รายการบันทึกของคุณ</h1>
+          <p>เก็บรวบรวมแบบบ้าน แบบสวน และผู้รับเหมาที่คุณชื่นชอบเพื่อวางแผนโครงการในฝัน</p>
+        </div>
+        <label class="sort-control">
+          เรียงตาม:
+          <select aria-label="เรียงรายการบันทึก">
+            <option>บันทึกล่าสุด</option>
+            <option>ชื่อรายการ</option>
+          </select>
+        </label>
+      </div>
+      <nav class="result-tabs simple-tabs" aria-label="ประเภทที่บันทึก">
+        <div>
+          <a class="active" href="#saved-homes">แบบบ้าน</a>
+          <a href="../../html/garden-lookbook.html">แบบสวน</a>
+          <a href="../../html/contractor-list.html">ผู้รับเหมา</a>
+          <a href="about-contact-page.html">บทความ</a>
+        </div>
+      </nav>
+      <section class="card-grid favorites-grid" id="saved-homes">
+        <article class="listing-card saved-card">
+          <div class="saved-image">
+            <a href="../../html/house-detail.html"><img src="../../imgs/idea2.jpg" alt="บ้านโมเดิร์นล้อมด้วยสวน" /></a>
+            <button class="heart-button selected" type="button" aria-label="นำออกจากรายการโปรด">♥</button>
+          </div>
+          <div class="listing-body">
+            <div class="listing-meta">
+              <span class="price-tag">งบ 3.5 ล้านบาท</span>
+              <span class="subtle">บันทึกเมื่อ 12 ม.ค. 2026</span>
+            </div>
+            <h3><a href="../../html/house-detail.html">บ้านโมเดิร์นทรอปิคอล ท่ามกลางสวนป่าฝน</a></h3>
+            <p>โดย <a href="contractor-profile.html" style="text-decoration:underline;">Atelier Design</a></p>
+          </div>
+        </article>
+        <article class="listing-card saved-card" id="saved-gardens">
+          <div class="saved-image">
+            <a href="garden-detail.html"><img src="../../imgs/idea1.jpg" alt="สวนหินสไตล์ญี่ปุ่น" /></a>
+            <button class="heart-button selected" type="button" aria-label="นำออกจากรายการโปรด">♥</button>
+          </div>
+          <div class="listing-body">
+            <div class="listing-meta">
+              <span class="price-tag">ไอเดียจัดสวน</span>
+              <span class="subtle">บันทึกเมื่อ 10 ม.ค. 2026</span>
+            </div>
+            <h3><a href="garden-detail.html">สวนเซนสไตล์ญี่ปุ่นดั้งเดิม พร้อมอ่างน้ำหิน</a></h3>
+            <p>โดย <a href="contractor-profile.html" style="text-decoration:underline;">BaanRak Garden</a></p>
+          </div>
+        </article>
+        <article class="listing-card saved-card">
+          <div class="saved-image">
+            <a href="../../html/house-detail.html"><img src="../../imgs/idea3.jpg" alt="บ้านมินิมอลโทนอุ่น" /></a>
+            <button class="heart-button selected" type="button" aria-label="นำออกจากรายการโปรด">♥</button>
+          </div>
+          <div class="listing-body">
+            <div class="listing-meta">
+              <span class="price-tag">งบ 2.2 ล้านบาท</span>
+              <span class="subtle">บันทึกเมื่อ 08 ม.ค. 2026</span>
+            </div>
+            <h3><a href="../../html/house-detail.html">มินิมอลนอร์ดิก อบอุ่นเน้นงานไม้สัมผัส</a></h3>
+            <p>โดย <a href="../../html/contractor-list.html" style="text-decoration:underline;">Studio BaanDee</a></p>
+          </div>
+        </article>
+        <article class="listing-card saved-card">
+          <div class="saved-image">
+            <a href="../../html/garden-lookbook.html"><img src="../../imgs/idea1.jpg" alt="ระเบียงบ้านพร้อมสวนแนวตั้ง" /></a>
+            <button class="heart-button selected" type="button" aria-label="นำออกจากรายการโปรด">♥</button>
+          </div>
+          <div class="listing-body">
+            <div class="listing-meta">
+              <span class="price-tag">ไอเดียจัดสวน</span>
+              <span class="subtle">บันทึกเมื่อ 05 ม.ค. 2026</span>
+            </div>
+            <h3><a href="../../html/garden-lookbook.html">ระเบียงพืชพรรณแนวตั้งสำหรับคอนโดพื้นที่จำกัด</a></h3>
+            <p>โดย <a href="../../html/contractor-list.html" style="text-decoration:underline;">GreenCraft Group</a></p>
+          </div>
+        </article>
+        <article class="listing-card saved-card">
+          <div class="saved-image">
+            <a href="../../html/house-detail.html"><img src="../../imgs/idea3.jpg" alt="บ้านสองชั้นโมเดิร์น" /></a>
+            <button class="heart-button selected" type="button" aria-label="นำออกจากรายการโปรด">♥</button>
+          </div>
+          <div class="listing-body">
+            <div class="listing-meta">
+              <span class="price-tag">งบ 4.8 ล้านบาท</span>
+              <span class="subtle">บันทึกเมื่อ 02 ม.ค. 2026</span>
+            </div>
+            <h3><a href="../../html/house-detail.html">บ้านโมเดิร์นลอฟท์ ดีไซน์โปร่งและรับแสง</a></h3>
+            <p>โดย <a href="contractor-profile.html" style="text-decoration:underline;">Atelier Design</a></p>
+          </div>
+        </article>
+        <article class="listing-card saved-card" id="saved-pros">
+          <div class="saved-image">
+            <a href="garden-detail.html"><img src="../../imgs/idea2.jpg" alt="สวนอังกฤษสไตล์คอทเทจ" /></a>
+            <button class="heart-button selected" type="button" aria-label="นำออกจากรายการโปรด">♥</button>
+          </div>
+          <div class="listing-body">
+            <div class="listing-meta">
+              <span class="price-tag">ไอเดียจัดสวน</span>
+              <span class="subtle">บันทึกเมื่อ 29 ธ.ค. 2025</span>
+            </div>
+            <h3><a href="garden-detail.html">สวนสไตล์คอทเทจดอกไม้หลากสี</a></h3>
+            <p>โดย <a href="contractor-profile.html" style="text-decoration:underline;">BaanRak Garden</a></p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a class="brand brand-light" href="homepage.html">
+            <span class="brand-mark">♧</span>
+            <span><strong>BaanSuan</strong><small>บ้านและสวน</small></span>
+          </a>
+          <p>แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด</p>
+        </div>
+        <div>
+          <h3>ประเภทแบบบ้าน</h3>
+          <a href="../../html/house-lookbook.html">บ้านโมเดิร์น</a>
+          <a href="../../html/house-lookbook.html">บ้านมินิมอล</a>
+          <a href="../../html/house-lookbook.html">บ้านสไตล์ไทยร่วมสมัย</a>
+          <a href="../../html/house-lookbook.html">ทาวน์โฮมสองชั้น</a>
+        </div>
+        <div>
+          <h3>บริการจัดสวน</h3>
+          <a href="garden-detail.html">จัดสวนอังกฤษ</a>
+          <a href="garden-detail.html">จัดสวนญี่ปุ่น</a>
+          <a href="garden-detail.html">สวนหินดูแลง่าย</a>
+          <a href="garden-detail.html">ระเบียงพืชพรรณ</a>
+        </div>
+        <div>
+          <h3>สมาคมผู้รับเหมา</h3>
+          <a href="../../html/contractor-list.html">ค้นหาผู้รับเหมา</a>
+          <a href="contractor-profile.html">มาตรฐานบริการ</a>
+          <a href="contractor-profile.html">รีวิวจากลูกค้า</a>
+          <a href="register.html">สมัครเป็นพันธมิตร</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BaanSuan. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" class="social-icon">f</a>
+          <a href="#" aria-label="Instagram" class="social-icon">◫</a>
+          <a href="#" aria-label="LINE" class="social-icon">⌁</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/site.js"></script>
+  </body>
+</html>

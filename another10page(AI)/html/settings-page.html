@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ตั้งค่าระบบ | BaanSuan</title>
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body class="page-settings">
+    <header class="site-header">
+      <a class="brand" href="homepage.html">
+        <span class="brand-mark">♧</span>
+        <span><strong>BaanSuan</strong><small>บ้านและสวน</small></span>
+      </a>
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <a class="active" href="homepage.html">บ้าน</a>
+        <a href="garden-detail.html">สวน</a>
+        <a href="../../html/contractor-list.html">หาผู้รับเหมา</a>
+        <a href="../../html/house-lookbook.html">บทความ</a>
+        <a href="about-contact-page.html">เกี่ยวกับเรา</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login-link" href="login.html">เข้าสู่ระบบ</a>
+        <a class="button button-small" href="register.html">ลงทะเบียนผู้รับเหมา</a>
+      </div>
+    </header>
+    <main class="settings-layout">
+      <aside class="settings-sidebar">
+        <nav aria-label="เมนูบัญชี">
+          <a href="../../html/user-dashboard.html">▦　แดชบอร์ด</a>
+          <a href="../../html/user-dashboard-detail.html">▱　โปรเจกต์ของฉัน</a>
+          <a href="../../html/chat.html">◌　ข้อความ</a>
+          <a href="../../html/user_profile.html">♙　บัญชีของฉัน</a>
+          <a class="active" href="settings-page.html">⚙　ตั้งค่าระบบ</a>
+        </nav>
+        <a class="account-mini" href="../../html/user_profile.html" style="text-decoration:none;color:inherit;">
+          <img src="../../imgs/user-img2.jpg" alt="" />
+          <div><strong>สมชาย ดีใจ</strong><span>ผู้ใช้ทั่วไป</span></div>
+        </a>
+        <a class="logout-link" href="login.html">⇥　ออกจากระบบ</a>
+      </aside>
+      <section class="settings-content">
+        <div class="settings-heading">
+          <h1>ตั้งค่าระบบ</h1>
+          <p>จัดการความปลอดภัย การเปิดเผยข้อมูล และการรับข้อมูลอัปเดตจากแพลตฟอร์ม</p>
+        </div>
+        <section class="settings-panel">
+          <h2>การแจ้งเตือนและความเป็นส่วนตัว</h2>
+          <label class="toggle-row">
+            <span><strong>การแจ้งเตือนทางอีเมล</strong><small>รับข้อมูลโปรโมชัน โปรเจกต์ใหม่ที่น่าสนใจ และข้อมูลอัปเดตรายสัปดาห์</small></span>
+            <input type="checkbox" checked /><i></i>
+          </label>
+          <label class="toggle-row">
+            <span><strong>เชื่อมต่อผ่าน LINE Notify</strong><small>ส่งสถานะและความคืบหน้าของโปรเจกต์ผ่าน LINE ของคุณ</small></span>
+            <input type="checkbox" checked /><i></i>
+          </label>
+          <label class="toggle-row">
+            <span><strong>การแจ้งเตือนผ่าน SMS</strong><small>รับรหัส OTP และความคืบหน้าสัญญาจ้างผ่านโทรศัพท์มือถือ</small></span>
+            <input type="checkbox" /><i></i>
+          </label>
+          <label class="toggle-row">
+            <span><strong>ความเป็นส่วนตัวบัญชีผู้ใช้</strong><small>เปิดให้ผู้รับเหมาและสถาปนิกสามารถดูโปรไฟล์และแกลเลอรีโปรเจกต์ของคุณได้</small></span>
+            <input type="checkbox" checked /><i></i>
+          </label>
+        </section>
+        <section class="settings-panel">
+          <h2>เปลี่ยนรหัสผ่าน</h2>
+          <div class="password-grid">
+            <label>รหัสผ่านเดิม<input type="password" placeholder="••••••••••••" /></label>
+            <label>รหัสผ่านใหม่<input type="password" placeholder="••••••••••••" /></label>
+            <label>ยืนยันรหัสผ่านใหม่<input type="password" placeholder="••••••••••••" /></label>
+          </div>
+        </section>
+        <section class="settings-panel">
+          <h2>การตั้งค่าทั่วไป</h2>
+          <label class="language-field">
+            ภาษาที่แสดงผล (Language)
+            <select><option>ภาษาไทย (Thai)</option><option>English</option></select>
+          </label>
+        </section>
+        <section class="danger-panel">
+          <div>
+            <h2>พื้นที่อันตราย (Danger Zone)</h2>
+            <p>การลบบัญชีผู้ใช้จะทำให้ข้อมูลส่วนตัว รูปภาพ และโปรเจกต์ทั้งหมดสูญหายและไม่สามารถกู้คืนได้</p>
+          </div>
+          <button type="button">ลบบัญชีถาวร</button>
+        </section>
+        <div class="settings-actions">
+          <a class="button button-ghost" href="../../html/user-dashboard.html">ยกเลิก</a>
+          <button class="button" type="button">บันทึกการเปลี่ยนแปลง</button>
+        </div>
+        <p class="action-notice" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a class="brand brand-light" href="homepage.html">
+            <span class="brand-mark">♧</span>
+            <span><strong>BaanSuan</strong><small>บ้านและสวน</small></span>
+          </a>
+          <p>แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด</p>
+        </div>
+        <div>
+          <h3>ประเภทแบบบ้าน</h3>
+          <a href="../../html/house-lookbook.html">บ้านโมเดิร์น</a>
+          <a href="../../html/house-lookbook.html">บ้านมินิมอล</a>
+          <a href="../../html/house-lookbook.html">บ้านสไตล์ไทยร่วมสมัย</a>
+          <a href="../../html/house-lookbook.html">ทาวน์โฮมสองชั้น</a>
+        </div>
+        <div>
+          <h3>บริการจัดสวน</h3>
+          <a href="garden-detail.html">จัดสวนอังกฤษ</a>
+          <a href="garden-detail.html">จัดสวนญี่ปุ่น</a>
+          <a href="garden-detail.html">สวนหินดูแลง่าย</a>
+          <a href="garden-detail.html">ระเบียงพืชพรรณ</a>
+        </div>
+        <div>
+          <h3>สมาคมผู้รับเหมา</h3>
+          <a href="../../html/contractor-list.html">ค้นหาผู้รับเหมา</a>
+          <a href="contractor-profile.html">มาตรฐานบริการ</a>
+          <a href="contractor-profile.html">รีวิวจากลูกค้า</a>
+          <a href="register.html">สมัครเป็นพันธมิตร</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BaanSuan. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" class="social-icon">f</a>
+          <a href="#" aria-label="Instagram" class="social-icon">◫</a>
+          <a href="#" aria-label="LINE" class="social-icon">⌁</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/site.js"></script>
+  </body>
+</html>
