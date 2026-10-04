@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ชำระค่าบริการ | BaanSuan</title>
+    <link rel="stylesheet" href="../css/user_profile.css" />
+    <link rel="stylesheet" href="../css/payment.css" />
+</head>
+
+<body>
+    <!--============================= Header =============================-->
+    <header>
+        <div class="head-logo">
+            <div class="logo-img">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z"
+                        stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <p>BaanSuan</p>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="เปิดเมนูหลัก" aria-controls="header-menu"
+            aria-expanded="false" onclick="
+          const isOpen = this.parentElement.toggleAttribute('data-menu-open');
+          this.setAttribute('aria-expanded', isOpen);
+          this.setAttribute('aria-label', isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก');
+        ">
+            <svg class="menu-open-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+            </svg>
+            <svg class="menu-close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+            </svg>
+        </button>
+        <div class="header-menu" id="header-menu">
+            <nav aria-label="เมนูหลัก">
+                <ul>
+                    <li><a href="house-lookbook.html">บ้าน</a></li>
+                    <li><a href="">สวน</a></li>
+                    <li><a href="house-detail.html#designer">หาผู้รับเหมา</a></li>
+                    <li><a href="">บทความ</a></li>
+                    <li><a href="">เกี่ยวกับเรา</a></li>
+                </ul>
+            </nav>
+            <div class="login-section">
+                <a class="login" href="user-dashboard.html#overview">เข้าสู่ระบบ</a>
+                <a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
+            </div>
+        </div>
+    </header>
+    <!--============================= End Header =============================-->
+
+    <main class="payment-container">
+        <!-- Left Column: Payment Details & Method -->
+        <section class="payment-main">
+            <div class="payment-header">
+                <h1 class="payment-title">ชำระค่าบริการตรวจรับบ้านและออกแบบสวน</h1>
+                <p class="payment-subtitle">ระบบรักษาความปลอดภัย 256-bit SSL
+                    ทุกธุรกรรมการชำระเงินของท่านถูกเข้ารหัสอย่างปลอดภัย</p>
+            </div>
+
+            <!-- Payment Method Selection -->
+            <div class="payment-method-section">
+                <h2 class="section-title">เลือกช่องทางการชำระเงิน</h2>
+                <div class="payment-method">
+                    <!-- Credit / Debit Card (Selected) -->
+                    <label class="method-card active">
+                        <input type="radio" name="payment_method" value="credit_card" checked />
+                        <span class="method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor"
+                                    stroke-width="2" />
+                                <line x1="2" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </span>
+                        <span class="method-name">บัตรเครดิต/เดบิต</span>
+                    </label>
+
+                    <!-- PromptPay -->
+                    <label class="method-card">
+                        <input type="radio" name="payment_method" value="promptpay" />
+                        <span class="method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                                <rect x="14" y="14" width="3" height="3" fill="currentColor" />
+                                <rect x="18" y="14" width="3" height="3" fill="currentColor" />
+                                <rect x="14" y="18" width="3" height="3" fill="currentColor" />
+                                <rect x="18" y="18" width="3" height="3" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <span class="method-name">พร้อมเพย์ (PromptPay)</span>
+                    </label>
+
+                    <!-- TrueMoney Wallet -->
+                    <label class="method-card">
+                        <input type="radio" name="payment_method" value="truemoney" />
+                        <span class="method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21 7V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M16 12H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <span class="method-name">TrueMoney Wallet</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Credit Card Form Card -->
+            <div class="card-form-container">
+                <form class="card-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="card_name" class="form-label">ชื่อบนบัตร (ภาษาอังกฤษ)</label>
+                        <input type="text" id="card_name" name="card_name" class="form-input"
+                            placeholder="KITTIPONG PRASERT" value="KITTIPONG PRASERT" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card_number" class="form-label">หมายเลขบัตรเครดิต</label>
+                        <div class="input-with-icon">
+                            <input type="text" id="card_number" name="card_number" class="form-input"
+                                placeholder="4540 •••• •••• 8820" value="4540 •••• •••• 8820" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="card_expiry" class="form-label">วันหมดอายุ (MM/YY)</label>
+                            <input type="text" id="card_expiry" name="card_expiry" class="form-input"
+                                placeholder="12 / 29" value="12 / 29" />
+                        </div>
+
+                        <div class="form-group half-width">
+                            <label for="card_cvv" class="form-label">รหัสปลอดภัย (CVV)</label>
+                            <input type="password" id="card_cvv" name="card_cvv" class="form-input" placeholder="•••"
+                                value="123" maxlength="4" />
+                        </div>
+                    </div>
+
+                    <div class="form-checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="save_card" checked />
+                            <span class="checkbox-text">บันทึกข้อมูลบัตรเพื่อความสะดวกในการชำระเงินครั้งต่อไป</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Security / PDPA note -->
+            <div class="security-note">
+                <svg class="lock-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="6" width="10" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M5 6V4.5C5 2.84315 6.34315 1.5 8 1.5C9.65685 1.5 11 2.84315 11 4.5V6" stroke="currentColor"
+                        stroke-width="1.5" />
+                </svg>
+                <span>ข้อมูลของท่านได้รับการคุ้มครองมาตรฐานสูงสุดตามกฎหมายพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล
+                    (PDPA)</span>
+            </div>
+        </section>
+
+        <!-- Right Column: Order Summary & Guarantee Policy -->
+        <aside class="payment-sidebar">
+            <!-- Summary Box -->
+            <div class="summary-card">
+                <h2 class="summary-title">สรุปรายการสั่งจ้าง</h2>
+
+                <div class="service-details">
+                    <span class="service-tag">บริการ: ตรวจสอบและออกแบบบ้าน &amp; สวน</span>
+                    <h3 class="service-package-name">Premium Package (ตรวจรับงาน 3 งวด)</h3>
+                    <p class="service-provider">ผู้ให้บริการ: Atelier Design Group</p>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="price-row">
+                        <span class="price-label">ค่าบริการแพ็กเกจหลัก</span>
+                        <span class="price-value">4,200.00 บาท</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">ภาษีมูลค่าเพิ่ม (7%)</span>
+                        <span class="price-value">300.00 บาท</span>
+                    </div>
+                    <div class="price-row discount-row">
+                        <span class="price-label">ส่วนลดโปรโมชั่นสมาชิกใหม่</span>
+                        <span class="price-value discount">- 0.00 บาท</span>
+                    </div>
+                </div>
+
+                <div class="total-row">
+                    <span class="total-label">ยอดชำระสุทธิ</span>
+                    <span class="total-amount">4,500.00</span>
+                </div>
+
+                <button type="button" class="btn-pay">ชำระเงิน 4,500.00 บาท</button>
+            </div>
+
+            <!-- Policy Box -->
+            <div class="policy-card">
+                <h3 class="policy-title">นโยบายการคืนเงินและคุ้มครองผู้ว่าจ้าง</h3>
+                <p class="policy-desc">
+                    BaanSuan ถือเงินประกันไว้จนกว่าการตรวจสอบงวดแรกจะแล้วเสร็จเพื่อความปลอดภัยสูงสุดของท่าน
+                    หากผู้รับเหมาไม่สามารถเข้าทำงานได้ ท่านสามารถยื่นขอคืนเงินได้เต็มจำนวนภายใน 7 วัน
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <!--============================= Footer =============================-->
+    <footer>
+        <div class="top-footer">
+            <div class="logo">
+                <p class="logo-name">BaanSuan</p>
+                <p>
+                    แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย
+                    พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด
+                </p>
+            </div>
+            <div class="menu">
+                <div class="cate">
+                    <div>
+                        <p class="menu-head">ประเภทแบบบ้าน</p>
+                    </div>
+                    <p class="cate-t">บ้านโมเดิร์น</p>
+                    <p class="cate-t">บ้านมินิมอล</p>
+                    <p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
+                    <p class="cate-t">ทาวน์โฮมสองชั้น</p>
+                </div>
+                <div class="cate">
+                    <div>
+                        <p class="menu-head">บริการจัดสวน</p>
+                    </div>
+                    <p class="cate-t">จัดสวนอังกฤษ</p>
+                    <p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
+                    <p class="cate-t">สวนหินดูแลง่าย</p>
+                    <p class="cate-t">ระเบียงพืชพรรณ</p>
+                </div>
+                <div class="cate">
+                    <div>
+                        <p class="menu-head">สมาคมผู้รับเหมา</p>
+                    </div>
+                    <p class="cate-t">ค้นหาผู้รับเหมา</p>
+                    <p class="cate-t">มาตรฐานบริการ</p>
+                    <p class="cate-t">รีวิวจากลูกค้า</p>
+                    <p class="cate-t">สมัครเป็นพันธมิตร</p>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="copy-text">
+                <p>&copy; 2026 BaanSuan. All rights reserved.</p>
+            </div>
+            <div class="contact">
+                <div class="foot-icon">
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z"
+                            stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="foot-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z"
+                            stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="foot-icon">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5"
+                            stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--============================= End Footer =============================-->
+</body>
+
+</html>
