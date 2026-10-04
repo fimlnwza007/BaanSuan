@@ -1,0 +1,292 @@
+.favorite {
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #E8E2D9;
+}
+
+
+.filter-heading {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2B2A27;
+}
+
+.fil-list {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E8E2D9;
+}
+
+fieldset legend {
+    color: #2B2A27;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+fieldset label {
+    margin-top: 12px;
+}
+
+fieldset input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border-radius: 4px;
+    border: 1px solid #E8E2D9;
+    background-color: #FAF6F0;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+fieldset input[type="checkbox"]:checked {
+    background-color: #C96A53;
+    border-color: #E8E2D9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2L6.6 10.8L12.2 5.2' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px;
+}
+
+/* 1. ลบ สไตล์เริ่มต้นของตัว Slider ออกก่อน (จำเป็นสำหรับ Chrome/Safari) */
+fieldset input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent; /* ซ่อนพื้นหลังเดิม */
+  width: 100%;
+}
+
+/* =========================================
+   2. เปลี่ยนสีราง (Track)
+   ========================================= */
+
+/* สำหรับ Chrome, Safari, Opera, Edge */
+fieldset input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #E8E2D9;  /* สีของราง */
+  height: 6px;             /* ความหนาของราง */
+  border-radius: 3px;
+}
+
+/* สำหรับ Firefox */
+fieldset input[type="range"]::-moz-range-track {
+  background-color: #E8E2D9;  /* สีของราง */
+  height: 8px;
+  border-radius: 4px;
+}
+
+/* =========================================
+   3. เปลี่ยนสีหัวเลื่อน (Thumb)
+   ========================================= */
+
+/* สำหรับ Chrome, Safari, Opera, Edge */
+fieldset input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #C96A53; /* สีของหัวเลื่อน */
+  height: 18px;              /* ขนาดความสูงหัวเลื่อน */
+  width: 18px;               /* ขนาดความกว้างหัวเลื่อน */
+  border-radius: 50%;        /* ทำเป็นทรงกลม */
+  margin-top: -6px;          /* ดันขึ้นเพื่อให้อยู่ตรงกลางรางพอดี (คำนวณจาก: (ความสูงราง - ความสูงหัวเลื่อน) / 2) */
+  cursor: pointer;
+}
+
+/* สำหรับ Firefox */
+fieldset input[type="range"]::-moz-range-thumb {
+  background-color: #C96A53; /* สีของหัวเลื่อน */
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.fil-list-l {
+    display: flex;
+    gap: 8px;
+}
+
+.fil-list-l input {
+    margin-top: 12px;
+    padding: 10px;
+    width: 112px;
+    background-color: #FAF6F0;
+    border-radius: 6px;
+    border: 1px solid #E8E2D9;
+}
+
+.fil-list-l input:focus {
+    outline: none;
+}
+
+article {
+    margin-top: 48px;
+}
+
+.article-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.left h1 {
+    color: #2B2A27;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.left p {
+    color: #C96A53;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 12px;
+    background-color: #F5ECE6;
+    border-radius: 12px;
+}
+
+.right {
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid #E8E2D9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #53514E;
+}
+
+.right select {
+    border: none;
+    font-size: 14px;
+    color: #53514E;
+}
+
+.right select:focus {
+    outline: none;
+}
+
+.house-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.house-list > section {
+    width: 100%;
+    border-radius: 16px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.house-list > section img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.house-type {
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #7A927B;
+    background-color: #faf6f0;
+    color: #7A927B;
+}
+
+.house-info {
+    padding: 24px;
+}
+
+.house-info-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.house-info button {
+    background-color: transparent;
+    border: none;
+}
+
+.house-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B2A27;
+    margin: 8px 0;
+}
+
+.house-info p {
+    font-size: 13px;
+    color: #8C8983;
+}
+
+.h-price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #E8E2D9;
+    margin-top: 16px;
+}
+
+.h-price p {
+    color: #C96A53;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.h-price a {
+    text-decoration: none;
+    color: #7A927B;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.nav-foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+    margin-bottom: 80px;
+    gap: 12px;
+}
+
+.nav-foot a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #E8E2D9;
+}
+
+.nav-foot a.current {
+    background-color: #C96A53;
+    color: white;
+}
+
+@media screen and (max-width: 560px) {
+    .house-list {
+        grid-template-columns: 1fr;
+    }
+}
+

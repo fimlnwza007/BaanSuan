@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="th">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>แบบบ้านน่าสนใจ | BaanSuan</title>
+		<link rel="stylesheet" href="../css/user_profile.css" />
+        <link rel="stylesheet" href="../css/house-lookbook.css">
+	</head>
+	<body>
+		<!--============================= Header =============================-->
+		<header>
+			<div class="head-logo">
+				<div class="logo-img">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<path d="M0 15.834C0 13.3339 1.54175 11.3671 4.23357 10.8338C6.25035 10.4338 8.3338 9.16705 9.16718 8.33368M7.5002 15.0006C6.03683 15.0051 4.62525 14.4594 3.54541 13.4717C2.46557 12.4841 1.79635 11.1268 1.67049 9.66883C1.54462 8.2109 1.9713 6.75892 2.8659 5.60085C3.7605 4.44279 5.05767 3.66324 6.50014 3.41681C11.2504 2.50011 12.5005 2.06675 14.1672 0C15.0006 1.66674 15.834 3.48348 15.834 6.66695C15.834 11.2505 11.8504 15.0006 7.5002 15.0006Z" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</div>
+				<p>BaanSuan</p>
+			</div>
+			<button
+				class="menu-toggle"
+				type="button"
+				aria-label="เปิดเมนูหลัก"
+				aria-controls="header-menu"
+				aria-expanded="false"
+				onclick="
+					const isOpen = this.parentElement.toggleAttribute('data-menu-open');
+					this.setAttribute('aria-expanded', isOpen);
+					this.setAttribute('aria-label', isOpen ? 'ปิดเมนูหลัก' : 'เปิดเมนูหลัก');
+				"
+			>
+				<svg class="menu-open-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+					<path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+				</svg>
+				<svg class="menu-close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+					<path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+				</svg>
+			</button>
+			<div class="header-menu" id="header-menu">
+				<nav aria-label="เมนูหลัก">
+					<ul>
+						<li><a href="">บ้าน</a></li>
+						<li><a href="">สวน</a></li>
+						<li><a href="">หาผู้รับเหมา</a></li>
+						<li><a href="">บทความ</a></li>
+						<li><a href="">เกี่ยวกับเรา</a></li>
+					</ul>
+				</nav>
+				<div class="login-section">
+					<a class="login" href="">เข้าสู่ระบบ</a>
+					<a class="contractor" href="">ลงทะเบียนผู้รับเหมา</a>
+				</div>
+			</div>
+		</header>
+		<!--============================= End Header =============================-->
+
+		<main>
+			<div class="content">
+				<aside>
+					<form action="#" method="get">
+						<section class="favorite" aria-labelledby="filter-heading">
+							<h1 class="fav-head" id="filter-heading">กรองการค้นหา</h1>
+							<fieldset>
+								<legend>ประเภทบ้าน</legend>
+                                <div class="fil-list">
+                                    <label><input type="checkbox" name="type" value="single" checked /> บ้านเดี่ยว</label>
+                                    <label><input type="checkbox" name="type" value="townhome" /> ทาวน์โฮม</label>
+                                    <label><input type="checkbox" name="type" value="condo" /> คอนโด</label>
+                                    <label><input type="checkbox" name="type" value="vacation" /> อาคารพาณิชย์</label>
+                                </div>
+							</fieldset>
+							<fieldset>
+                                <legend>สไตล์การออกแบบ</legend>
+                                <div class="fil-list">
+                                    <label><input type="checkbox" name="style" value="modern" /> โมเดิร์น</label>
+                                    <label><input type="checkbox" name="style" value="minimal" checked /> มินิมอล</label>
+                                    <label><input type="checkbox" name="style" value="loft" /> ลอฟท์</label>
+                                    <label><input type="checkbox" name="style" value="thai" /> ไทยประยุกต์</label>
+                                    <label><input type="checkbox" name="style" value="nordic" /> นอร์ดิก</label>
+                                </div>
+							</fieldset>
+							<fieldset>
+								<legend>งบประมาณก่อสร้าง</legend>
+                                <div class="fil-list">
+                                    <label for="">ราคาขั้นต่ำ</label>
+                                    <input id="budget-min" type="range" name="budget-min" min="1" value="1" />
+                                    <label for="">ราคาสูงสุด</label>
+                                    <input id="budget-max" type="range" name="budget-max" min="1" value="5" />
+                                </div>
+							</fieldset>
+							<fieldset>
+								<legend>พื้นที่ใช้สอย (ตร.ม.)</legend>
+                                <div class="fil-list-l">
+                                    <input id="area-min" type="number" name="area-min" min="0" placeholder="ขั้นต่ำ: 50" />
+                                    <input id="area-max" type="number" name="area-max" min="0" placeholder="สูงสุด: 300+" />
+                                </div>
+							</fieldset>
+						</section>
+					</form>
+				</aside>
+
+				<article>
+					<div class="article-head">
+                        <div class="left">
+                            <h1>แบบบ้านน่าสนใจ</h1>
+                            <p>พบ 142 แบบบ้าน</p>
+                        </div>
+                        <div class="right">
+                            <label for="sort-homes">เรียงตาม :</label>
+                            <select id="sort-homes" name="sort">
+                                <option value="recommended">ยอดนิยมสูงสุด</option>
+                                <option value="newest">มาใหม่</option>
+                                <option value="price-low">ราคาต่ำไปสูง</option>
+                                <option value="price-high">ราคาสูงไปต่ำ</option>
+                            </select>
+                        </div>
+					</div>
+					<section class="house-list" aria-label="รายการแบบบ้าน">
+						<section>
+							<img src="../imgs/idea1.jpg" alt="บ้านเดี่ยวสไตล์โมเดิร์นล้อมด้วยสวน" />
+                            <div class="house-info">
+                                <div class="house-info-head">
+                                    <p class="house-type">มินิมอล</p>
+                                    <button type="button" aria-label="บันทึกบ้านสไตล์โมเดิร์น"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.72616 2.79988C1.25321 3.48758 1.00002 4.30255 1 5.13715C1 6.86217 2.12509 8.13718 3.25017 9.26219L7.38149 13.2612C7.52327 13.42 7.69721 13.5467 7.89174 13.633C8.08628 13.7194 8.29696 13.7633 8.50979 13.762C8.72262 13.7606 8.93273 13.714 9.12616 13.6252C9.31959 13.5364 9.4919 13.4075 9.63166 13.247L13.751 9.26219C14.8761 8.13718 16.0012 6.85467 16.0012 5.13715C16.0051 4.30072 15.7543 3.4829 15.2819 2.79256C14.8096 2.10221 14.1382 1.57209 13.3571 1.27273C12.576 0.973375 11.7223 0.918991 10.9095 1.11682C10.0967 1.31464 9.36347 1.7553 8.80735 2.38013C8.76806 2.42214 8.72055 2.45563 8.66778 2.47853C8.61501 2.50143 8.5581 2.51324 8.50058 2.51324C8.44305 2.51324 8.38614 2.50143 8.33337 2.47853C8.2806 2.45563 8.2331 2.42214 8.1938 2.38013C7.63593 1.75933 6.90285 1.32235 6.0914 1.1269C5.27995 0.931448 4.42829 0.98672 3.64891 1.28542C2.86953 1.58411 2.1991 2.11218 1.72616 2.79988Z" stroke="#8C8983" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    </button>
+                                </div>
+                                <h2>บ้านสไตล์โมเดิร์นมินิมอลในเมือง</h2>
+                                <p>3 ห้องนอน · 3 ห้องน้ำ · 150 ตร.ม.</p>
+                                <div class="h-price">
+                                    <p>งบ 2.2 - 2.8 ล้านบาท</p>
+                                    <a href="">รายละเอียด <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke="#7A927B" stroke-width="2" stroke-linecap="round"/>
+</svg>
+</a>
+                                </div>
+                            </div>
+						</section>
+						<section>
+							<img src="../imgs/idea2.jpg" alt="บ้านทรงสูงร่วมสมัยในย่านเมือง" />
+							<div class="house-info">
+								<div class="house-info-head">
+									<p class="house-type">ลอฟท์</p>
+									<button type="button" aria-label="บันทึกบ้านสไตล์ลอฟท์"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1.72616 2.79988C1.25321 3.48758 1.00002 4.30255 1 5.13715C1 6.86217 2.12509 8.13718 3.25017 9.26219L7.38149 13.2612C7.52327 13.42 7.69721 13.5467 7.89174 13.633C8.08628 13.7194 8.29696 13.7633 8.50979 13.762C8.72262 13.7606 8.93273 13.714 9.12616 13.6252C9.31959 13.5364 9.4919 13.4075 9.63166 13.247L13.751 9.26219C14.8761 8.13718 16.0012 6.85467 16.0012 5.13715C16.0051 4.30072 15.7543 3.4829 15.2819 2.79256C14.8096 2.10221 14.1382 1.57209 13.3571 1.27273C12.576 0.973375 11.7223 0.918991 10.9095 1.11682C10.0967 1.31464 9.36347 1.7553 8.80735 2.38013C8.76806 2.42214 8.72055 2.45563 8.66778 2.47853C8.61501 2.50143 8.5581 2.51324 8.50058 2.51324C8.44305 2.51324 8.38614 2.50143 8.33337 2.47853C8.2806 2.45563 8.2331 2.42214 8.1938 2.38013C7.63593 1.75933 6.90285 1.32235 6.0914 1.1269C5.27995 0.931448 4.42829 0.98672 3.64891 1.28542C2.86953 1.58411 2.1991 2.11218 1.72616 2.79988Z" stroke="#8C8983" stroke-width="2" stroke-linecap="round"/>
+									</svg></button>
+								</div>
+								<h2>โฮมออฟฟิศสไตล์โมเดิร์นลอฟท์</h2>
+								<p>4 ห้องนอน · 5 ห้องน้ำ · 210 ตร.ม.</p>
+								<div class="h-price">
+									<p>งบ 3.5 - 4.2 ล้านบาท</p>
+									<a href="">รายละเอียด <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke="#7A927B" stroke-width="2" stroke-linecap="round"/>
+									</svg></a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<img src="../imgs/idea3.jpg" alt="บ้านไม้ยกพื้นสไตล์ไทยประยุกต์ท่ามกลางสวน" />
+							<div class="house-info">
+								<div class="house-info-head">
+									<p class="house-type">ไทยประยุกต์</p>
+									<button type="button" aria-label="บันทึกบ้านไทยประยุกต์"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1.72616 2.79988C1.25321 3.48758 1.00002 4.30255 1 5.13715C1 6.86217 2.12509 8.13718 3.25017 9.26219L7.38149 13.2612C7.52327 13.42 7.69721 13.5467 7.89174 13.633C8.08628 13.7194 8.29696 13.7633 8.50979 13.762C8.72262 13.7606 8.93273 13.714 9.12616 13.6252C9.31959 13.5364 9.4919 13.4075 9.63166 13.247L13.751 9.26219C14.8761 8.13718 16.0012 6.85467 16.0012 5.13715C16.0051 4.30072 15.7543 3.4829 15.2819 2.79256C14.8096 2.10221 14.1382 1.57209 13.3571 1.27273C12.576 0.973375 11.7223 0.918991 10.9095 1.11682C10.0967 1.31464 9.36347 1.7553 8.80735 2.38013C8.76806 2.42214 8.72055 2.45563 8.66778 2.47853C8.61501 2.50143 8.5581 2.51324 8.50058 2.51324C8.44305 2.51324 8.38614 2.50143 8.33337 2.47853C8.2806 2.45563 8.2331 2.42214 8.1938 2.38013C7.63593 1.75933 6.90285 1.32235 6.0914 1.1269C5.27995 0.931448 4.42829 0.98672 3.64891 1.28542C2.86953 1.58411 2.1991 2.11218 1.72616 2.79988Z" stroke="#8C8983" stroke-width="2" stroke-linecap="round"/>
+									</svg></button>
+								</div>
+								<h2>บ้านไทยร่วมสมัยบรรยากาศอบอุ่น</h2>
+								<p>3 ห้องนอน · 2 ห้องน้ำ · 180 ตร.ม.</p>
+								<div class="h-price">
+									<p>งบ 2.8 - 3.4 ล้านบาท</p>
+									<a href="">รายละเอียด <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke="#7A927B" stroke-width="2" stroke-linecap="round"/>
+									</svg></a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<img src="../imgs/idea1.jpg" alt="บ้านโมเดิร์นพร้อมสระว่ายน้ำและสวน" />
+							<div class="house-info">
+								<div class="house-info-head">
+									<p class="house-type">โมเดิร์น</p>
+									<button type="button" aria-label="บันทึกบ้านโมเดิร์นพร้อมสระว่ายน้ำ"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1.72616 2.79988C1.25321 3.48758 1.00002 4.30255 1 5.13715C1 6.86217 2.12509 8.13718 3.25017 9.26219L7.38149 13.2612C7.52327 13.42 7.69721 13.5467 7.89174 13.633C8.08628 13.7194 8.29696 13.7633 8.50979 13.762C8.72262 13.7606 8.93273 13.714 9.12616 13.6252C9.31959 13.5364 9.4919 13.4075 9.63166 13.247L13.751 9.26219C14.8761 8.13718 16.0012 6.85467 16.0012 5.13715C16.0051 4.30072 15.7543 3.4829 15.2819 2.79256C14.8096 2.10221 14.1382 1.57209 13.3571 1.27273C12.576 0.973375 11.7223 0.918991 10.9095 1.11682C10.0967 1.31464 9.36347 1.7553 8.80735 2.38013C8.76806 2.42214 8.72055 2.45563 8.66778 2.47853C8.61501 2.50143 8.5581 2.51324 8.50058 2.51324C8.44305 2.51324 8.38614 2.50143 8.33337 2.47853C8.2806 2.45563 8.2331 2.42214 8.1938 2.38013C7.63593 1.75933 6.90285 1.32235 6.0914 1.1269C5.27995 0.931448 4.42829 0.98672 3.64891 1.28542C2.86953 1.58411 2.1991 2.11218 1.72616 2.79988Z" stroke="#8C8983" stroke-width="2" stroke-linecap="round"/>
+									</svg></button>
+								</div>
+								<h2>วิลล่าครอบครัวสไตล์โมเดิร์นทรอปิคอล</h2>
+								<p>4 ห้องนอน · 5 ห้องน้ำ · 320 ตร.ม.</p>
+								<div class="h-price">
+									<p>งบ 5.5 - 6.8 ล้านบาท</p>
+									<a href="">รายละเอียด <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke="#7A927B" stroke-width="2" stroke-linecap="round"/>
+									</svg></a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<img src="../imgs/idea2.jpg" alt="ทาวน์โฮมดีไซน์ร่วมสมัยในเมือง" />
+							<div class="house-info">
+								<div class="house-info-head">
+									<p class="house-type">มินิมอล</p>
+									<button type="button" aria-label="บันทึกทาวน์โฮมมินิมอล"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1.72616 2.79988C1.25321 3.48758 1.00002 4.30255 1 5.13715C1 6.86217 2.12509 8.13718 3.25017 9.26219L7.38149 13.2612C7.52327 13.42 7.69721 13.5467 7.89174 13.633C8.08628 13.7194 8.29696 13.7633 8.50979 13.762C8.72262 13.7606 8.93273 13.714 9.12616 13.6252C9.31959 13.5364 9.4919 13.4075 9.63166 13.247L13.751 9.26219C14.8761 8.13718 16.0012 6.85467 16.0012 5.13715C16.0051 4.30072 15.7543 3.4829 15.2819 2.79256C14.8096 2.10221 14.1382 1.57209 13.3571 1.27273C12.576 0.973375 11.7223 0.918991 10.9095 1.11682C10.0967 1.31464 9.36347 1.7553 8.80735 2.38013C8.76806 2.42214 8.72055 2.45563 8.66778 2.47853C8.61501 2.50143 8.5581 2.51324 8.50058 2.51324C8.44305 2.51324 8.38614 2.50143 8.33337 2.47853C8.2806 2.45563 8.2331 2.42214 8.1938 2.38013C7.63593 1.75933 6.90285 1.32235 6.0914 1.1269C5.27995 0.931448 4.42829 0.98672 3.64891 1.28542C2.86953 1.58411 2.1991 2.11218 1.72616 2.79988Z" stroke="#8C8983" stroke-width="2" stroke-linecap="round"/>
+									</svg></button>
+								</div>
+								<h2>ทาวน์โฮมมินิมอลสองโทนสุดเท่</h2>
+								<p>2 ห้องนอน · 3 ห้องน้ำ · 110 ตร.ม.</p>
+								<div class="h-price">
+									<p>งบ 1.7 - 2.1 ล้านบาท</p>
+									<a href="">รายละเอียด <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke="#7A927B" stroke-width="2" stroke-linecap="round"/>
+									</svg></a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<img src="../imgs/idea3.jpg" alt="ห้องนั่งเล่นโปร่งสบายตกแต่งด้วยไม้และต้นไม้" />
+							<div class="house-info">
+								<div class="house-info-head">
+									<p class="house-type">นอร์ดิก</p>
+									<button type="button" aria-label="บันทึกบ้านสไตล์นอร์ดิก"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1.72616 2.79988C1.25321 3.48758 1.00002 4.30255 1 5.13715C1 6.86217 2.12509 8.13718 3.25017 9.26219L7.38149 13.2612C7.52327 13.42 7.69721 13.5467 7.89174 13.633C8.08628 13.7194 8.29696 13.7633 8.50979 13.762C8.72262 13.7606 8.93273 13.714 9.12616 13.6252C9.31959 13.5364 9.4919 13.4075 9.63166 13.247L13.751 9.26219C14.8761 8.13718 16.0012 6.85467 16.0012 5.13715C16.0051 4.30072 15.7543 3.4829 15.2819 2.79256C14.8096 2.10221 14.1382 1.57209 13.3571 1.27273C12.576 0.973375 11.7223 0.918991 10.9095 1.11682C10.0967 1.31464 9.36347 1.7553 8.80735 2.38013C8.76806 2.42214 8.72055 2.45563 8.66778 2.47853C8.61501 2.50143 8.5581 2.51324 8.50058 2.51324C8.44305 2.51324 8.38614 2.50143 8.33337 2.47853C8.2806 2.45563 8.2331 2.42214 8.1938 2.38013C7.63593 1.75933 6.90285 1.32235 6.0914 1.1269C5.27995 0.931448 4.42829 0.98672 3.64891 1.28542C2.86953 1.58411 2.1991 1.11218 1.72616 2.79988Z" stroke="#8C8983" stroke-width="2" stroke-linecap="round"/>
+									</svg></button>
+								</div>
+								<h2>คอนโดโทนอบอุ่นแต่งธรรมชาติสไตล์สแกนดิเนเวีย</h2>
+								<p>1 ห้องนอน · 1 ห้องน้ำ · 55 ตร.ม.</p>
+								<div class="h-price">
+									<p>งบ 0.8 - 1.2 ล้านบาท</p>
+									<a href="">รายละเอียด <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke="#7A927B" stroke-width="2" stroke-linecap="round"/>
+									</svg></a>
+								</div>
+							</div>
+						</section>
+					</section>
+					<nav class="nav-foot" aria-label="หน้ารายการแบบบ้าน">
+						<a href="" aria-label="หน้าก่อนหน้า">‹</a>
+						<a class="current" href="" aria-current="page">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="" aria-label="หน้าถัดไป">›</a>
+					</nav>
+				</article>
+			</div>
+		</main>
+
+		<!--============================= Footer =============================-->
+		<footer>
+			<div class="top-footer">
+				<div class="logo">
+					<p class="logo-name">BaanSuan</p>
+					<p>แพลตฟอร์มเชื่อมโยงแรงบันดาลใจในการออกแบบบ้านและสวนของคนไทย พร้อมคัดสรรผู้รับเหมามืออาชีพที่ได้รับความไว้วางใจสูงสุด</p>
+				</div>
+				<div class="menu">
+					<div class="cate">
+						<p class="menu-head">ประเภทแบบบ้าน</p>
+						<p class="cate-t">บ้านโมเดิร์น</p>
+						<p class="cate-t">บ้านมินิมอล</p>
+						<p class="cate-t">บ้านสไตล์ไทยร่วมสมัย</p>
+						<p class="cate-t">ทาวน์โฮมสองชั้น</p>
+					</div>
+					<div class="cate">
+						<p class="menu-head">บริการจัดสวน</p>
+						<p class="cate-t">จัดสวนอังกฤษ</p>
+						<p class="cate-t">จัดสวนเซนญี่ปุ่น</p>
+						<p class="cate-t">สวนหินดูแลง่าย</p>
+						<p class="cate-t">ระเบียงพืชพรรณ</p>
+					</div>
+					<div class="cate">
+						<p class="menu-head">สมาคมผู้รับเหมา</p>
+						<p class="cate-t">ค้นหาผู้รับเหมา</p>
+						<p class="cate-t">มาตรฐานบริการ</p>
+						<p class="cate-t">รีวิวจากลูกค้า</p>
+						<p class="cate-t">สมัครเป็นพันธมิตร</p>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="copy-text">
+					<p>&copy; 2026 BaanSuan. All rights reserved.</p>
+				</div>
+				<div class="contact">
+					<div class="foot-icon" aria-label="Facebook">
+						<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M5.99956 0H8.2494V3.00024H5.99956C5.80067 3.00024 5.60991 3.07926 5.46927 3.21993C5.32863 3.36059 5.24962 3.55137 5.24962 3.7503V6.00048H8.2494L7.49945 9.00072H5.24962V15.0012H2.24984V9.00072H0V6.00048H2.24984V3.7503C2.24984 2.75566 2.6449 1.80176 3.34811 1.09844C4.05132 0.39512 5.00507 0 5.99956 0Z" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<div class="foot-icon" aria-label="Instagram">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M11.6259 3.37527H11.6334M3.7503 0H11.2509C13.3221 0 15.0012 1.67907 15.0012 3.7503V11.2509C15.0012 13.3221 13.3221 15.0012 11.2509 15.0012H3.7503C1.67907 15.0012 0 13.3221 0 11.2509V3.7503C0 1.67907 1.67907 0 3.7503 0ZM10.5006 7.02829C10.5932 7.65252 10.4866 8.29005 10.1959 8.85019C9.90527 9.41034 9.4454 9.86457 8.88171 10.1483C8.31802 10.432 7.67923 10.5308 7.05618 10.4305C6.43314 10.3303 5.85757 10.0361 5.41134 9.58986C4.96512 9.14364 4.67095 8.56807 4.5707 7.94502C4.47044 7.32198 4.56919 6.68318 4.85291 6.1195C5.13663 5.55581 5.59087 5.09594 6.15101 4.80529C6.71115 4.51464 7.34868 4.40802 7.97292 4.50059C8.60966 4.59501 9.19915 4.89171 9.65432 5.34688C10.1095 5.80205 10.4062 6.39154 10.5006 7.02829Z" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<div class="foot-icon" aria-label="สถิติ BaanSuan">
+						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M0 0V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H13.5M12 4.5L8.25 8.25L5.25 5.25L3 7.5" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--============================= End Footer =============================-->
+	</body>
+</html>
